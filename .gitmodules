@@ -1,0 +1,6 @@
+[submodule "BungeeTabListPlus.wiki"]
+	path = BungeeTabListPlus.wiki
+	url = https://github.com/CodeCrafter47/BungeeTabListPlus.wiki
+[submodule "AdvancedTabOverlay.wiki"]
+	path = AdvancedTabOverlay.wiki
+	url = https://github.com/CodeCrafter47/AdvancedTabOverlay.wiki
