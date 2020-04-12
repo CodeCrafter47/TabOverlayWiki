@@ -1,9 +1,8 @@
-Usually BungeeTabListPlus will fill the slots of the tab list from left to right then top to bottom.
+Usually !!name will fill the slots of the tab list from left to right then top to bottom.
 This is different from how vanilla Minecraft does it: top to bottom then left to right.
-However there are different options available to change that, which are explained below.
+However, there are different options available to change that, which are explained below.
 
-Change the Slot Order in the `!players` Component
--------------------------------------------------
+### Change the Slot Order in the `!players` Component
 
 The `!players` component provides a `fillSlotsVertical` option that can be set to `true` to change the slot order.
 In the provided default configuration file this line is not present however you can just add it.
@@ -39,20 +38,19 @@ defaultPing: 1000
 components:
 - !players
   playerSet: all_players
-  playerOrder: 'alphabetically'
+  playerOrder: "alphabetically"
   playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
   fillSlotsVertical: true
-- !spacer {}
+- !spacer
 -
 -
 - {text: "&cTime: &6${time H:mm:ss}", icon: "default/clock.png", ping: 0}
 - {text: "&cPlayers: &6${playerset:all_players size}", icon: "default/players.png", ping: 0}
 ```
 
-
-Change the Slot Order in the `!players_by_server` Component
------------------------------------------------------------
+[!]: ifBTLP
+### Change the Slot Order in the `!players_by_server` Component
 
 If you're using the `!players_by_server` component instead of the `!players` component, don't worry it has the `fillSlotsVertical` option too.
 And it works pretty similar to the `!players` component.
@@ -89,14 +87,14 @@ components:
   - {text: "&e&n${server}&f&o (${server_player_count}):", icon: "colors/yellow.png", ping: 0}
   serverSeparator:
   -
-  playerOrder: 'alphabetically'
+  playerOrder: "alphabetically"
   playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
   fillSlotsVertical: true
 ```
 
-Change the Slot Order using the `!container` Component
-------------------------------------------------------
+[!]: todoATO
+### Change the Slot Order using the `!container` Component
 
 This option is slightly more complicated, but allows changing the slot order in case where you using multiple `!players` (and other) Components.
 To explain how this works let's start with a tab list configuration that uses the default (left-to-right) slot order that we want to change.
@@ -142,7 +140,7 @@ components:
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
 ```
 
-Here's a simplified view of what we have to do in order to use the `!container` component to change get a top-to-bottom slot order. Currently our config (simplified) looks like this:
+Here's a simplified view of what we have to do in order to use the `!container` component to change get a top-to-bottom slot order. Currently, our config (simplified) looks like this:
 ```yaml
 components:
 - Component 1
@@ -204,3 +202,5 @@ components:
 ```
 
 If you compare this result with the original config you may notice that the number of empty slots between the admins and the list of all players has been reduced from three to one. That is because in the original we wanted an entire row of empty slots whereas with the changed slot order we only want a single empty slot.
+
+[!]: endIF

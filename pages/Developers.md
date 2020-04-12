@@ -1,5 +1,6 @@
-Maven Repository
-================
+[!]: ifBTLP
+
+### Maven Repository
 
 To get easy access to the required dependencies you should add my maven repository to your project.
 ```
@@ -9,8 +10,7 @@ To get easy access to the required dependencies you should add my maven reposito
 </repository>
 ```
 
-Javadoc
-=======
+### Javadoc
 
 [Bukkit side API](http://ci.codecrafter47.dyndns.eu/job/BungeeTabListPlus/codecrafter47.bungeetablistplus$bungeetablistplus-api-bukkit/javadoc/)
 
@@ -18,8 +18,7 @@ Javadoc
 
 [Sponge side API](http://ci.codecrafter47.dyndns.eu/job/BungeeTabListPlus/codecrafter47.bungeetablistplus$bungeetablistplus-api-sponge/javadoc/)
 
-Bukkit side API
-===============
+### Bukkit side API
 
 If BungeeTabListPlus_BukkitBridge.jar is installed on the Bukkit server it provides an API allowing developers register custom variables.
 
@@ -69,13 +68,11 @@ If BungeeTabListPlus_BukkitBridge.jar is installed on the Bukkit server it provi
    
     Assuming you've registered a variable called `my_variable` then you can use `${viewer my_variable}` and `${player my_variable}` in your config.
 
-Bungee side API
-===============
+### Bungee side API
 
 The plugin provides an extensive API on BungeeCord allowing third party plugins to create custom variables as well as set a custom tab list for players.
 
-Add the BungeeTabListPlus API dependency to your project
---------------------------------------------------------
+#### Add the BungeeTabListPlus API dependency to your project
 
 Add this to bungee.yml (or plugin.yml):
 ```
@@ -96,8 +93,7 @@ Add a dependency to the BungeeTabListPlus API to your maven project.
 </dependency>
 ```
 
-Adding custom placeholders
---------------------------
+#### Adding custom placeholders
 
 1.  Create a class for your custom variable
     ```java
@@ -126,8 +122,7 @@ Adding custom placeholders
    
     Assuming you've registered a variable called `my_variable` then you can use `${viewer my_variable}` and `${player my_variable}` in your config.
 
-Creating a custom tab list
---------------------------
+#### Creating a custom tab list
 
 1.  Create a custom tab list
     ```java
@@ -228,8 +223,7 @@ public class DemoPlugin extends Plugin {
 }
 ```
 
-Controlling fake players
-------------------------
+#### Controlling fake players
 
 Get the FakePlayerManager:
 ```
@@ -262,8 +256,7 @@ Remove a fake player from the tab list:
 fakePlayerManager.removeFakePlayer(fakePlayer);
 ```
 
-Sponge side API
-===============
+### Sponge side API
 
 If BungeeTabListPlus_SpongeBridge.jar is installed on your Sponge server it provides an API allowing developers register custom placeholders.
 
@@ -312,3 +305,5 @@ If BungeeTabListPlus_SpongeBridge.jar is installed on your Sponge server it prov
 5.  Use your variable:
    
     Assuming you've registered a variable called `my_variable` then you can use `${viewer my_variable}` and `${player my_variable}` in your config.
+    
+[!]: endIF

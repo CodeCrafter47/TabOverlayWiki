@@ -1,23 +1,12 @@
-Installing BungeeTabListPlus
-============================
+[!]: ifBTLP
 
-System Requirements
--------------------
+### System Requirements
 
 * BungeeCord build 995 or newer
 * You can use the plugin with older Minecraft clients by using the ProtocolSupportBungee plugin
 * Java 8
-* Memory requirements: _The memory required by your BungeeCord setup may differ from the values given below, depending on your configuration and other plugins you use._
 
-    Players | Minimum RAM required
-    ------- | --------------------
-    25      | 100MB
-    50      | 250MB
-    100     | 500MB
-    250     | 1GB
-
-Installation
-------------
+### Installation
 
 1. Download BungeeTabListPlus.jar from the spigotmc website or from jenkins and install it on your BungeeCord server.
 
@@ -25,4 +14,20 @@ Installation
 
 2. **Optional:** Download BungeeTabListPlus_BukkitBridge.jar from the spigotmc website or from jenkins and install it on all your Spigot and Bukkit servers.
 
-   This step is required for most variables to work. Also things like VanishNoPacket support won't work without this.
+   This step is required for most variables to work. Also things like VanishNoPacket support will not work without this.
+   
+[!]: endIF
+[!]: ifATO
+### System Requirements
+
+* A Spigot server (version 1.8 or above)
+* ProtocolLib (latest version)
+* Java 8
+
+### Installation
+
+Download `AdvancedTabOverlay` ([dev-builds on my jenkins](https://ci.codecrafter47.de/job/AdvancedTabOverlay/)).
+
+2. **Optional:** Install Vault and/or PlaceholderAPI to get access to more placeholders.
+   
+[!]: endIF

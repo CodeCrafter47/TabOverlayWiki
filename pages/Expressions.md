@@ -53,6 +53,10 @@ Binary Operators
 | `>`      | Compares two numbers, true if the first operand is greater than the second operand.     |
 | `>=`     | Compares two numbers, true if the first operand is greater or equal the second operand. |
 | `.`      | Concatenates two strings.                                                               |
+| `+`      | Adds two numbers.                                                               |
+| `-`      | Subtracts one number from another.                                                               |
+| `*`      | Multiplies two numbers.                                                               |
+| `/`      | Divides one number by another.                                                               |
 
 Examples:
 ```

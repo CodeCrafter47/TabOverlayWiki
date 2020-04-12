@@ -1,12 +1,15 @@
 It is possible to configure whether vanished players will show up on the tab list and who will be able to see them. You can also modify the appearance of hidden players on the tab list so they can be identified as such.
 
+[!]: ifBTLP
 **Note:** You _need_ to install BungeeTabListPlus_BukkitBridge on _all_ Bukkit/ Spigot servers for this to work.
 
-Supported Vanish Plugins
-------------------------
+[!]: endIf
+
+### Supported Vanish Plugins
 
 For this to work you must be using one of the following vanish plugins:
 
+[!]: ifBTLP
 * Essentials
 * SuperVanish/ PremiumVanish
 * CMI
@@ -14,24 +17,32 @@ For this to work you must be using one of the following vanish plugins:
 * ProxySuite
 * ProtocolVanish
 
-Configure who can see Vanished Players
---------------------------------------
+[!]: endIf
+[!]: ifATO
+* Essentials
+* SuperVanish/ PremiumVanish
+* CMI
+* VanishNoPacket
 
-You can use the `hiddenPlayers` option in the tab list configuration file (default.yml) to
+[!]: endIf
+
+### Configure who can see Vanished Players
+
+You can use the `hiddenPlayers` option in the tab list configuration file to
 change who can see hidden players. The following options are available:
 
 | Value       | Description                                   |
 | ----------- | --------------------------------------------- |
 | `VISIBLE`   | Hidden players are shown on the tab list.     |
-| `VISIBLE_TO_ADMINS` | Players with the `bungeetablistplus.seevanished` permission can see hidden players. This is the default. |
+| `VISIBLE_TO_ADMINS` | Players with the `!!seevanishedperm` permission can see hidden players. This is the default. |
 | `INVISIBLE` | Hidden players do not appear on the tab list. |
 
 Have a look at the example at the bottom, then it should be clear how this works.
 
-Change the Appearance of Hidden Players
----------------------------------------
+### Change the Appearance of Hidden Players
 
-As an example we'll use the custom placeholder mechanism to add a `/vanish` suffix to hidden players:
+As an example we will use the custom placeholder mechanism to add a `/vanish` suffix to hidden players.
+This is useful so that staff member with the permission to see vanished players know who is vanished.
 
 ```yaml
 customPlaceholders:
@@ -42,7 +53,7 @@ customPlaceholders:
 ```
 
 The above code allows us to use the `${vanish_suffix}` placeholder in `playerComponent`.
-Now this only makes sense if we set `hiddenPlayers` to `VISIBLE` or `VISIBLE_TO_ADMINS`, so we'll use `VISIBLE_TO_ADMINS` for the following example:
+Now this only makes sense if we set `hiddenPlayers` to `VISIBLE` or `VISIBLE_TO_ADMINS`, so we will use `VISIBLE_TO_ADMINS` for the following example:
 
 | admin perspective        | player perspective       |
 | ------------------------ | ------------------------ |
@@ -71,8 +82,7 @@ playerOrder: vault_primary_group_weight asc, name
 playerComponent: "${player vault_prefix}&f${player name}${vanish_suffix}"
 ```
 
-Change Visibility of Hidden Player per Player Set
--------------------------------------------------
+### Change Visibility of Hidden Player per Player Set
 
 It is possible to select for each player set whether hidden player should be included.
 Just have a look at the following example:

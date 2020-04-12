@@ -1,0 +1,9 @@
+variables:
+!!name -> BungeeTabListPlus or AdvancedTabOverlay
+!!iconFolder -> heads/ or icons/
+!!seevanishedperm -> bungeetablistplus.seevanished
+
+[!]: todo
+[!]: ifBTLP
+[!]: ifATO
+[!]: endIF

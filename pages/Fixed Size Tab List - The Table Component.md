@@ -1,14 +1,222 @@
 This page shows how to use the _table_ component to customize the layout of
  your tab list.
 
+[!]: ifATO
+
+### Splitting the tab list into columns
+
+![](images/fixed-size-table-ato-1.png)
+
+```yaml
+showTo: all
+priority: 1
+
+# Three player sets, one for each world
+playerSets:
+  overworld: ${player world} == "world"
+  nether: ${player world} == "world_nether"
+  end: ${player world} == "world_the_end"
+
+type: FIXED_SIZE
+size: 60
+
+defaultIcon: "colors/dark_gray.png"
+defaultPing: 1000
+
+components:
+- !table
+  columns:
+    0: # 1st column
+    - {text: "&a&lOverworld", icon: "colors/green.png", ping: 0}
+    - !players
+      playerSet: overworld
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    1: # 2nd column
+    - {text: "&4&lNether", icon: "colors/dark_red.png", ping: 0}
+    - !players
+      playerSet: nether
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    2: # 3rd column
+    - {text: "&d&lThe End", icon: "colors/light_purple.png", ping: 0}
+    - !players
+      playerSet: end
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+```
+
+Here the `!table` tag tells the plugin that we want to use a _table_
+ component. Then we use the `columns` option to specify the content of each
+ column. The content of each column is again a list of components. In our case
+ we have a custom slot we use to display the world name and below a _players_
+ component to display the players on that world.
+
+Actually it isn't necessary to put the custom slots with the world names inside
+ the _table_ component. We could also place them before the _table_ component in
+ the configuration file. The following example shows how the `components` part
+ of the config file would look after that change. Note that is still results in
+ the same tab list as the example shown above.
+
+```yaml
+components:
+- {text: "&a&lOverworld", icon: "colors/green.png", ping: 0}
+- {text: "&4&lNether", icon: "colors/dark_red.png", ping: 0}
+- {text: "&d&lThe End", icon: "colors/light_purple.png", ping: 0}
+- !table
+  columns:
+    0: # 1st column
+    - !players
+      playerSet: overworld
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    1: # 2nd column
+    - !players
+      playerSet: nether
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    2: # 3rd column
+    - !players
+      playerSet: end
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+
+```
+
 --------------------------------------------------------------------------------
+
+### Using one column only for custom slots
+
+Now we change the left-most column to display some info to the player:
+
+![](images/fixed-size-table-ato-2.png)
+
+```yaml
+showTo: all
+priority: 1
+
+playerSets:
+  all_players: all
+
+type: FIXED_SIZE
+size: 60
+
+defaultIcon: "colors/dark_gray.png"
+defaultPing: 1000
+
+components:
+- !table
+  columns:
+    0: # Display some info on the first column
+    - {text: "&lInfo", icon: "colors/gold.png", ping: 0} # 1st row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 2nd row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 3rd row
+    - {text: "&cWorld:", icon: "colors/red.png", ping: 0} # 4th row
+    - {text: "&6${viewer world}", icon: "colors/red.png", ping: 0} # 5th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 6th row
+    - {text: "&cRank:", icon: "colors/red.png", ping: 0} # 7th row
+    - {text: "&6${viewer vault_primary_group}", icon: "colors/red.png", ping: 0} # 8th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 9th row
+    - {text: "&cPing:", icon: "colors/red.png", ping: 0} # 10th row
+    - {text: "&6${viewer ping}ms", icon: "colors/red.png", ping: 0} # 11th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 12th row
+    - {text: "&cPlayers:", icon: "colors/red.png", ping: 0} # 13th row
+    - {text: "&6${playerset:all_players size}", icon: "colors/red.png", ping: 0} # 14th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 15th row
+    - {text: "&cBalance:", icon: "colors/red.png", ping: 0} # 16th row
+    - {text: "&6${viewer vault_balance}", icon: "colors/red.png", ping: 0} # 17th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 18th row
+    - {text: "&cTime:", icon: "colors/red.png", ping: 0} # 19th row
+    - {text: "&6${time HH:mm:ss}", icon: "colors/red.png", ping: 0} # 20th row
+    1-2: # 2nd and 3rd column
+    - {text: "&lPlayers", icon: "colors/aqua.png", ping: 0}
+    - {text: "&lPlayers", icon: "colors/aqua.png", ping: 0}
+    -
+    -
+    - !players
+      playerSet: all_players
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+
+```
+
+### Group the players by world again
+
+```yaml
+showTo: all
+priority: 1
+
+playerSets:
+  all_players:  all
+  overworld: ${player world} == "world"
+  nether: ${player world} == "world_nether"
+  end: ${player world} == "world_the_end"
+
+type: FIXED_SIZE
+size: 60
+
+defaultIcon: "colors/dark_gray.png"
+defaultPing: 1000
+
+components:
+- !table
+  columns:
+    0: # Display some info on the first column
+    - {text: "&lInfo", icon: "colors/gold.png", ping: 0} # 1st row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 2nd row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 3rd row
+    - {text: "&cWorld:", icon: "colors/red.png", ping: 0} # 4th row
+    - {text: "&6${viewer world}", icon: "colors/red.png", ping: 0} # 5th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 6th row
+    - {text: "&cRank:", icon: "colors/red.png", ping: 0} # 7th row
+    - {text: "&6${viewer vault_primary_group}", icon: "colors/red.png", ping: 0} # 8th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 9th row
+    - {text: "&cPing:", icon: "colors/red.png", ping: 0} # 10th row
+    - {text: "&6${viewer ping}ms", icon: "colors/red.png", ping: 0} # 11th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 12th row
+    - {text: "&cPlayers:", icon: "colors/red.png", ping: 0} # 13th row
+    - {text: "&6${playerset:all_players size}", icon: "colors/red.png", ping: 0} # 14th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 15th row
+    - {text: "&cBalance:", icon: "colors/red.png", ping: 0} # 16th row
+    - {text: "&6${viewer vault_balance}", icon: "colors/red.png", ping: 0} # 17th row
+    - {text: "", icon: "colors/gold.png", ping: 0} # 18th row
+    - {text: "&cTime:", icon: "colors/red.png", ping: 0} # 19th row
+    - {text: "&6${time HH:mm:ss}", icon: "colors/red.png", ping: 0} # 20th row
+    1: # 2nd column
+    - {text: "&a&lOverworld", icon: "colors/green.png", ping: 0}
+    - !players
+      playerSet: overworld
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+    2: # 3rd column
+    - {text: "&4&lNether", icon: "colors/dark_red.png", ping: 0}
+    - !players
+      playerSet: nether
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+      minSize: 9
+      maxSize: 9
+    - {text: "&d&lThe End", icon: "colors/light_purple.png", ping: 0}
+    - !players
+      playerSet: end
+      playerComponent: "${player name}"
+      morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
+
+```
+
+Now this looks as follows:
+
+![](images/fixed-size-table-ato-3.png)
+
+[!]: endIF
+[!]: ifBTLP
 
 ### Splitting the tab list into columns
 
 ![](images/fixed-size-table-1.png)
 
 ```yaml
-showTo: 'true'
+showTo: all
 priority: 1
 
 showHeaderFooter: false
@@ -48,7 +256,7 @@ components:
       morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
 ```
 
-Here the `!table` marker tells the plugin that we want to use a _table_
+Here the `!table` tag tells the plugin that we want to use a _table_
  component. Then we use the `columns` option to specify the content of each
  column. The content of each column is again a list of components. In our case
  we have a custom slot we use to display the server name and below a _players_
@@ -94,7 +302,7 @@ Now we change the left-most column to display some custom slots instead of the
 ![](images/fixed-size-table-2.png)
 
 ```yaml
-showTo: 'true'
+showTo: all
 priority: 1
 
 showHeaderFooter: false
@@ -204,7 +412,7 @@ Now we want to use two columns for the survival server:
 Here's how it is done:
 
 ```yaml
-showTo: 'true'
+showTo: all
 priority: 1
 
 showHeaderFooter: false
