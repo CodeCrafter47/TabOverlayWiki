@@ -106,14 +106,15 @@ The following components are available:
     ```
     
     _Example:_
+    
+    ![](images/animation-2.gif)
     ```yaml
-    !animated
-    components:
-      - {text: "&7Hello &a${player name}", icon: "${player skin}", ping: 0}
-      - {text: "&7Hello &b${player name}", icon: "${player skin}", ping: 0}
-      - {text: "&7Hello &c${player name}", icon: "${player skin}", ping: 0}
-      - {text: "&7Hello &d${player name}", icon: "${player skin}", ping: 0}
-    interval: 0.4
+    - !animated
+      interval: 1.5
+      components:
+      - {text: "&cBalance: &6${viewer vault_balance 1.2}", icon: "default/balance.png", ping: 0}
+      - {text: "&cRank: &6${viewer vault_primary_group}", icon: "default/rank.png", ping: 0}
+      - {text: "&cPing: ${viewer_colored_ping}ms", icon: "default/ping.png", ping: 0}
     ```
 
 3. ### `!conditional` Component
