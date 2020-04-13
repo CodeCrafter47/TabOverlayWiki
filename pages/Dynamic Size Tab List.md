@@ -3,7 +3,7 @@ This page discusses the `DYNAMIC_SIZE` tab list type.
 It is able to adjust its size to the number of players much like vanilla, but it does not allow for slots with custom content.
 
 The image below shows how a dynamic size tab list can look.
-![Image of a dynamic size tab list](images/dynamic-size-ato.png)
+![](images/dynamic-size-ato.png)
 
 ### Example
 
@@ -48,13 +48,13 @@ In the following we have a closer look at the options specific to the `DYNAMIC_S
     
     [!]: endIf
     1.  Create a player set containing the players you want to display.
-        Check out the [Player Sets](Player Sets) wiki page for more information.
+        Check out the [Player Sets](Player-Sets) wiki page for more information.
     2.  Set `playerSet` to the name of the player set you created in step i.
 
 * ##### `playerOrder`
 
     The `playerOrder` option specifies the order in which players are displayed on the tab list.
-    Have a look at the [Player Order](Player Order) wiki page for more information.
+    Have a look at the [Player Order](Player-Order) wiki page for more information.
 
 * ##### `playerComponent`
     

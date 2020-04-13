@@ -74,8 +74,8 @@ fun update_wiki(
             for ((line, text) in lines.withIndex()) {
                 if (text.contains("[!]"))
                     println("TODO: [!] ${file.name} $line")
-                "\\[[^]]]+\\]\\((.+)\\)".toRegex().findAll(text).forEach { match ->
-                    if (!linkTargets.contains(match.groupValues[1]) && !match.groupValues[1].startsWith("http")) {
+                "\\[[^]]+\\]\\(([^)]+)\\)".toRegex().findAll(text).forEach { match ->
+                    if ((!linkTargets.contains(match.groupValues[1]) && !match.groupValues[1].startsWith("http")) || match.groupValues[1].contains(' ')) {
                         println("Unknown link target: ${file.name} ${match.groupValues[1]} $line")
                     }
                 }

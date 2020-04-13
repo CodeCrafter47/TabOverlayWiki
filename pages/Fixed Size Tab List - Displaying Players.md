@@ -552,7 +552,7 @@ The `!players` component has more options that can used to customize its appeara
 
 [!]: endIF
 
-You can find out about configuring the player order on the [Player Order](Player Order) page.
+You can find out about configuring the player order on the [Player Order](Player-Order) page.
 
 For all possible options of the components have a look at the
  [Components](Components) page.

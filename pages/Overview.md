@@ -9,7 +9,7 @@ It consists of a config file (`config.yml`) as well as the `tabLists/` and `!!ic
 * #### `config.yml`:
   
   Global configuration file containing different useful settings that can be used within the different tab lists.
-  Please check the [Global Configuration ](GlobalConfiguration) page for more information.
+  Please check the [Global Configuration ](Global-Configuration) page for more information.
 
 * #### `tabLists/`
   
@@ -160,7 +160,7 @@ As a result of having two different tab list types, some config options are avai
     The `showHeaderFooter` can be used to enable/ disable the header and footer provided by !!name.
     E.g. if you want to use a different plugin for the header and footer you can disable that functionality in !!name by setting `showHeaderFooter` to `false`.
     
-    How to configure the header and footer is explained on the [Header and Footer](Header and Footer) page.
+    How to configure the header and footer is explained on the [Header and Footer](Header-and-Footer) page.
     
 * ##### `hiddenPlayers`
 
@@ -177,19 +177,19 @@ As a result of having two different tab list types, some config options are avai
     hiddenPlayers: VISIBLE_TO_ADMINS
     ```
   
-    Checkout the [Hidden Players](Hidden Players) wiki page for more information.
+    Checkout the [Hidden Players](Hidden-Players) wiki page for more information.
     
 * ##### `customPlaceholders`
 
     The custom placeholders feature allows you to create your own placeholders.
     It can be used to create custom prefixes, animations and much more.
-    Check out the [Custom Placeholders](Custom Placeholders) wiki page.
+    Check out the [Custom Placeholders](Custom-Placeholders) wiki page.
     
 * ##### `playerSets`
 
     A _player set_ is a named subset of your players.
     The plugin uses player sets to display players and player counts in the tab list.
-    How to create and use player sets is discussed on the [Player Sets](Player Sets) wiki page.
+    How to create and use player sets is discussed on the [Player Sets](Player-Sets) wiki page.
     
 * ##### `longText`
 
@@ -217,7 +217,7 @@ As a result of having two different tab list types, some config options are avai
 
 #### Type Specific Options
 
-The type specific options are discussed on the [Dynamic Size Tab List](Dynamic Size Tab List) and [Fixed Size Tab List](Fixed Size Tab List) wiki pages.
+The type specific options are discussed on the [Dynamic Size Tab List](Dynamic-Size-Tab-List) and [Fixed Size Tab List](Fixed-Size-Tab-List) wiki pages.
 
 --------------------------------------------------------------------------------
 
