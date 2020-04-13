@@ -16,7 +16,6 @@ As you can see the `!players` component just lists the players while the `!playe
 [!]: ifATO
 This is done using the `!players` component.
 [!]: endIF
---------------------------------------------------------------------------------
 
 ### Using the `!players` component
 
@@ -63,7 +62,7 @@ Those are described in the [Components](Components) wiki page.
     
     If you want to change which players the tab list displays, e.g. so it only displays players in a specific group, do the following:
     1.  Create a player set containing the players you want to display.
-        Check out the [Player Sets](Player Sets) wiki page for more information.
+        Check out the [Player Sets](Player-Sets) wiki page for more information.
     2.  Set `playerSet` to the name of the player set you created in step i.
 
 * ##### `playerComponent`
@@ -217,18 +216,18 @@ And one called `non_staff` which contains all players not have the `tablist.staf
 We use the `!players` component twice. The first time with the `staff` player set and the second time with the `non_staff` player set.
 Custom slots are used to clearly separate the two. 
 
-![](images/separate-admin-list-config.png)
+![](images/separate-staff.png)
 
 ```yaml
 showTo: all
-priority: 0
+priority: 1000
 
 showHeaderFooter: false
 
 playerSets:
   all_players: all
-  staff: ${player permission tablist.staff} = true
-  non_staff: ${player permission tablist.staff} = false
+  staff: ${player permission tablist.staff}
+  non_staff: ( !${player permission tablist.staff} )
 
 type: FIXED_SIZE
 size: 60
@@ -237,14 +236,19 @@ defaultIcon: colors/dark_gray.png
 defaultPing: 1000
 
 components:
-- {text: "&cServer: &6${viewer server}", icon: "default/server.png", ping: 0}
 - {text: "&cRank: &6${viewer vault_primary_group}", icon: "default/rank.png", ping: 0}
 - {text: "&cPing: &6${viewer ping}ms", icon: "default/ping.png", ping: 0}
+[!]: ifBTLP
+- {text: "&cTPS: &6${viewer server tps}", icon: "default/server.png", ping: 0}
+[!]: endIF
+[!]: ifATO
+- {text: "&cTPS: &6${viewer server_tps}", icon: "default/server.png", ping: 0}
+[!]: endIF
 - 
 - 
 - 
 - {text: "&e&l━━━━━━━━━━", alignment: CENTER}
-- {text: "&e&lAdmins", alignment: CENTER}
+- {text: "&e&lStaff", alignment: CENTER}
 - {text: "&e&l━━━━━━━━━━", alignment: CENTER}
 - !players
   playerSet: staff
@@ -258,10 +262,10 @@ components:
 - {text: "&e&lPlayers", alignment: CENTER}
 - {text: "&e&l━━━━━━━━━━", alignment: CENTER}
 - !players
-  playerSet: nonstaff
+  playerSet: non_staff
   playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
-- !spacer {}
+- !spacer
 -
 -
 -
@@ -331,7 +335,7 @@ A complete list can be found on the [Components](Components) wiki page.
     
     If you want to change which players the tab list displays, e.g. so it only displays players in a specific group, do the following:
     1.  Create a player set containing the players you want to display.
-        Check out the [Player Sets](Player Sets) wiki page for more information.
+        Check out the [Player Sets](Player-Sets) wiki page for more information.
     2.  Set `playerSet` to the name of the player set you created in step i.
 
 * ##### `serverHeader`
@@ -555,4 +559,4 @@ For all possible options of the components have a look at the
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 8 - Fixed Size Tablist - The Table Component](Configuration-Basics-Part-8---Fixed-Size-Tablist---Table)
+Next: [Fixed Size Tab List - The Table Component](Fixed-Size-Tab-List---The-Table-Component)

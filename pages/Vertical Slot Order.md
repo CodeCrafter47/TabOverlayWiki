@@ -93,26 +93,27 @@ components:
   fillSlotsVertical: true
 ```
 
-[!]: todoATO
+[!]: endIF
+
 ### Change the Slot Order using the `!container` Component
 
 This option is slightly more complicated, but allows changing the slot order in case where you using multiple `!players` (and other) Components.
 To explain how this works let's start with a tab list configuration that uses the default (left-to-right) slot order that we want to change.
-What's special about the example below is that admins are displayed first followed by a list of all players grouped by server.
-This is achieved by first using the `!player` component to display all admins and then the `!players_by_server` component to display all players grouped by their server.
-There are also some custom text slots, one to create a label saying `Admins` and three to create a row of empty slots between the admins in the list of all players.
+What's special about the example below is that staff members are displayed first followed by a list the remaining players .
+This is achieved by first using the `!player` component to display all staff members and then another `!players` component to display the remaining players.
 
-![](images/vertical-slot-order-5.png)
+![](images/vertical-component-1.png)
 
 ```yaml
 showTo: all
-priority: 100
+priority: 0
 
 showHeaderFooter: false
 
 playerSets:
   all_players: all
-  admins: ${player vault_primary_group} == "Admin"
+  staff: ${player permission tablist.staff} = true
+  non_staff: ${player permission tablist.staff} = false
 
 type: FIXED_SIZE
 size: 60
@@ -121,22 +122,16 @@ defaultIcon: colors/dark_gray.png
 defaultPing: 1000
 
 components:
-- {text: "&c&nAdmins&f&o (${playerset:admins size}):", icon: "colors/red.png", ping: 0}
+- {text: "&e&l━━━ Staff ━━━", alignment: CENTER}
 - !players
-  playerSet: admins
-  playerComponent: "${player vault_prefix}${player name}"
+  playerSet: staff
+  playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
-- ""
-- ""
-- ""
-- !players_by_server
-  playerSet: all_players
-  serverOrder: "playercount,online,alphabetically"
-  serverHeader:
-  - {text: "&e&n${server}&f&o (${server_player_count}):", icon: "colors/yellow.png", ping: 0}
-  serverSeparator:
-  - ""
-  playerComponent: "${player vault_prefix}${player name}"
+-
+- {text: "&e&l━━━ Players ━━━", alignment: CENTER}
+- !players
+  playerSet: nonstaff
+  playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
 ```
 
@@ -162,7 +157,7 @@ components:
 
 By applying that idea to our example configuration from above we get the following result:
 
-![](images/vertical-slot-order-6.png)
+![](images/vertical-component-2.png)
 
 ```yaml
 showTo: all
@@ -184,23 +179,19 @@ components:
 - !container
   fillSlotsVertical: true
   components:
-  - {text: "&c&nAdmins&f&o (${playerset:admins size}):", icon: "colors/red.png", ping: 0}
+  - {text: "&e&l━━━ Staff ━━━", alignment: CENTER}
   - !players
-    playerSet: admins
-    playerComponent: "${player vault_prefix}${player name}"
+    playerSet: staff
+    playerComponent: "${player name}"
     morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
-  - ""
-  - !players_by_server
-    playerSet: all_players
-    serverOrder: "playercount,online,alphabetically"
-    serverHeader:
-    - {text: "&e&n${server}&f&o (${server_player_count}):", icon: "colors/yellow.png", ping: 0}
-    serverSeparator:
-    - ""
-    playerComponent: "${player vault_prefix}${player name}"
+  -
+  - {text: "&e&l━━━ Players ━━━", alignment: CENTER}
+  - !players
+    playerSet: non_staff
+    playerComponent: "${player name}"
     morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
 ```
 
-If you compare this result with the original config you may notice that the number of empty slots between the admins and the list of all players has been reduced from three to one. That is because in the original we wanted an entire row of empty slots whereas with the changed slot order we only want a single empty slot.
+--------------------------------------------------------------------------------
 
-[!]: endIF
+Next: [Component Reference Page](Components)

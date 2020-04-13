@@ -77,3 +77,7 @@ In theory you can use any placeholder to sort players by simply putting down its
 | `world`              | players by the name of the world they are playing on alphabetically                        |
 | `world viewer-first`       | players which are in the same world as the player who sees the tablist appear at the top   |
 [!]: endIF
+
+--------------------------------------------------------------------------------
+
+Next: [Custom Placeholders](Custom-Placeholders)

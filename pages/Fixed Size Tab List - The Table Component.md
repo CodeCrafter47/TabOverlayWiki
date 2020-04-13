@@ -475,3 +475,9 @@ components:
       playerComponent: "${player name}"
       morePlayersComponent: {text: "... and ${other_count} others", icon: "default/players.png", ping: 0}
 ```
+
+[!]: endIF
+
+--------------------------------------------------------------------------------
+
+Next: [Vertical Slot Order](Vertical-Slot-Order)

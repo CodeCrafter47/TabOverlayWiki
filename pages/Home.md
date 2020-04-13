@@ -4,7 +4,8 @@ Welcome to the !!name wiki!
 _This plugin is in an early stage of development. Not everything is working perfectly yet. You can help by testing the plugin and providing feedback to the developer._
 [!]: endIF
 
-### Basics
+### General
+
 * [Installing the plugin](Installation)
 * [Global Configuration Options (`config.yml`)](Global-Configuration)
 * [Commands and Permissions](Commands)

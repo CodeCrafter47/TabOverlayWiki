@@ -19,7 +19,9 @@ First we have a look at the options available specifically for the `FIXED_SIZE` 
     | 60   | 3       | 20   |
     | 80   | 4       | 20   |
     
+    [!]: ifBTLP
     __Important:__ If you have 1.7 or older clients the `size` in the tab list configuration file must match the `tab_size` configured in BungeeCords `config.yml`.
+    [!]: endIF
     
     The `columns` option allows you to specify the number of columns directly.
     It can be set to `1`, `2`, `3` or `4`.
@@ -121,7 +123,7 @@ You can try adding more custom slots or changing the size of the tab list by
  
 #### Using Color Codes and Placeholders in Custom Slots
 
-This example demonstrates the use of color codes and shows how to use placeholders to display the total player count as well as the ping and server of the viewer (player looking at the tab list) in a custom slot.
+This example demonstrates the use of color codes and shows how to use placeholders to display the total player count as well as the ping and world of the viewer (player looking at the tab list) in a custom slot.
 
 ![](images/fixed-size-2.png)
 
@@ -295,12 +297,12 @@ defaultIcon: colors/black.png
 defaultPing: 1000
 
 components:
-- {text: 'Slot 1', alignment: LEFT}
-- {text: 'Slot 2', alignment: CENTER}
-- {text: 'Slot 3', alignment: CENTER}
-- {text: 'Slot 4', alignment: RIGHT}
+- {text: "Slot 1", alignment: LEFT}
+- {text: "Slot 2", alignment: CENTER}
+- {text: "Slot 3", alignment: CENTER}
+- {text: "Slot 4", alignment: RIGHT}
 ```
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 7 - Fixed Size Tablist - Adding Players](Configuration-Basics-Part-7---Fixed-Size-Tablist---Adding-Players)
+Next: [Fixed Size Tab List - Displaying Players](Fixed-Size-Tab-List---Displaying-Players)

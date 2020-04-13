@@ -26,7 +26,7 @@
 
 ### Installation
 
-Download `AdvancedTabOverlay` ([dev-builds on my jenkins](https://ci.codecrafter47.de/job/AdvancedTabOverlay/)).
+1. Download and install AdvancedTabOverlay ([dev-builds on my jenkins](https://ci.codecrafter47.de/job/AdvancedTabOverlay/)).
 
 2. **Optional:** Install Vault and/or PlaceholderAPI to get access to more placeholders.
    

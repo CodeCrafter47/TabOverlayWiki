@@ -16,7 +16,12 @@ It consists of a config file (`config.yml`) as well as the `tabLists/` and `!!ic
   Here are the files for configuring the actual look of the tab list. By default
   there is only one file called `default.yml`. You can however create more files
   to provide different tab lists to players depending on several conditions 
+  [!]: ifBTLP
   (e.g. the players server or permission group).
+  [!]: endIF
+  [!]: ifATO
+  (e.g. players with a specific permission).
+  [!]: endIF
   
   If you have more than one `.yml` file in the `tabLists` directory the plugin will use the `showTo` and `priority` options inside the `.yml` files to decide which tab list a player sees.
 
@@ -41,7 +46,12 @@ It is used to configure the layout and content of the tab list.
 On a fresh installation the `tabLists/` directory contains one file called `default.yml`.
 
 It is possible to create multiple tab list layouts by creating multiple tab list configuration files in the `tabLists` directory.
+[!]: ifBTLP
 This allows you to e.g. display a different tab list to admins or to players on a particular server.
+[!]: endIf
+[!]: ifATO
+This allows you to e.g. display a different tab list to players with a specific permission.
+[!]: endIF
 
 
 Each _tab list configuration file_ can be of one of two different types: `FIXED_SIZE` or `DYNAMIC_SIZE`.
@@ -52,11 +62,22 @@ The big advantage of the `FIXED_SIZE` tab list type is that it allows for custom
 
 The following image illustrates the difference.
 
-[!]: todo
+[!]: ifBTLP
 
 | `FIXED_SIZE`                   | `DYNAMIC_SIZE`                      |
 | ------------------------------ | ----------------------------------- |
 | ![](images/default-config.gif) | ![](images/dynamic-size-config.png) |
+
+
+[!]: endIF
+[!]: ifATO
+
+
+| `FIXED_SIZE`                   | `DYNAMIC_SIZE`                      |
+| ------------------------------ | ----------------------------------- |
+| ![](images/separate-staff.png) | ![](images/dynamic-size-ato.png) |
+
+[!]: endIF
 
 As a result of having two different tab list types, some config options are available independent of the tab list type, whereas other options are only available when using one of the tab list types.
 
@@ -72,7 +93,14 @@ As a result of having two different tab list types, some config options are avai
      If no tab list configuration file can be shown to a player according to the `showTo` predicate, then he will see the vanilla tab list.
      
      If there are multiple tab lists which can be shown to a player according to the `showTo` predicate, the plugin selects the tab list with the larger `priority`.
-     So if you create a tab list visible only on a specific server, you should give a higher `priority` (larger number) than the default tab list (`default.yml`) which is typically visible to all players.
+     So if you create a tab list visible only 
+     [!]: ifBTLP
+     on a specific server,
+     [!]: endIF
+     [!]: ifATO
+     on a specific world,
+     [!]: endIF
+     you should give a higher `priority` (larger number) than the default tab list (`default.yml`) which is typically visible to all players.
      
      ###### Examples:
      
@@ -107,7 +135,7 @@ As a result of having two different tab list types, some config options are avai
      priority: 10
      ```
   
-     A tab list that is visible only on some worlds, e.g. the `survival`, `survival_nether` and `survival_the_end` servers:
+     A tab list that is visible only on some worlds, e.g. the `survival`, `survival_nether` and `survival_the_end` worlds:
      ```yaml
      showTo: |
        ${viewer world} = "survival"
@@ -193,4 +221,4 @@ The type specific options are discussed on the [Dynamic Size Tab List](Dynamic S
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 3 - Header and Footer](Configuration-Basics-Part-3---Header-and-Footer)
+Next: [Player Sets](Player-Sets)

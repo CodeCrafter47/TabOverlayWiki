@@ -39,7 +39,14 @@ In the following we have a closer look at the options specific to the `DYNAMIC_S
 
     The `playerSet` option selects which players to display on the tab list.
     
+    [!]: ifBTLP
     If you want to change which players the tab list displays, e.g. so it only displays players on a specific server, do the following:
+    
+    [!]: endIf
+    [!]: ifATO
+    If you want to change which players the tab list displays, e.g. so it only displays players in a specific world or players with a specific permission, do the following:
+    
+    [!]: endIf
     1.  Create a player set containing the players you want to display.
         Check out the [Player Sets](Player Sets) wiki page for more information.
     2.  Set `playerSet` to the name of the player set you created in step i.
@@ -60,4 +67,4 @@ In the following we have a closer look at the options specific to the `DYNAMIC_S
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 6 - Fixed Size Tablist Introduction](Configuration-Basics-Part-6---Fixed-Size-Tablist-Introduction)
+Next: [Fixed Size Tab List](Fixed-Size-Tab-List)

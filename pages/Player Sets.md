@@ -171,4 +171,4 @@ playerSets:
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 5 - Dynamic Size Tablist](Configuration-Basics-Part-5---Dynamic-Size-Tablist)
+Next: [Header and Footer](Header-and-Footer)

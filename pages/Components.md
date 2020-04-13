@@ -142,6 +142,7 @@ The following components are available:
    false: <Component or List of Components>
    ```
    
+   [!]: ifBTLP
    _Example:_
    The example shows how you can display whether a server is online.
    It also changes the icon of the slot.
@@ -151,6 +152,8 @@ The following components are available:
    true: {text: "&bSurvival: &aONLINE", icon: "colors/green.png", ping: 0}
    false: {text: "&bSurvival: &cOFFLINE", icon: "colors/red.png", ping: 0}
    ```
+   
+   [!]: endIf
    
    _Additional Information:_ [Expression Syntax](Expressions)
 
@@ -165,13 +168,13 @@ The following components are available:
        
        If you want to change which players the tab list displays, e.g. so it only displays players in a specific group, do the following:
        1.  Create a player set containing the players you want to display.
-           Check out the [Player Sets](Player Sets) wiki page for more information.
+           Check out the [Player Sets](Player-Sets) wiki page for more information.
        2.  Set `playerSet` to the name of the player set you created in step i.
 
     * ##### `playerOrder`
     
         The `playerOrder` option specifies the order in which players are displayed on the tab list.
-        Have a look at the [Player Order](Player Order) wiki page for more information.
+        Have a look at the [Player Order](Player-Order) wiki page for more information.
    
    * ##### `playerComponent`
        
@@ -248,13 +251,13 @@ The following components are available:
         
         If you want to change which players the tab list displays, e.g. so it only displays players in a specific group, do the following:
         1.  Create a player set containing the players you want to display.
-            Check out the [Player Sets](Player Sets) wiki page for more information.
+            Check out the [Player Sets](Player-Sets) wiki page for more information.
         2.  Set `playerSet` to the name of the player set you created in step i.
 
     * ##### `playerOrder`
     
         The `playerOrder` option specifies the order in which players are displayed on the tab list.
-        Have a look at the [Player Order](Player Order) wiki page for more information.
+        Have a look at the [Player Order](Player-Order) wiki page for more information.
         
     * ##### `serverOrder`
     
@@ -421,26 +424,26 @@ The following components are available:
         
         If you want to change which players the tab list displays, e.g. so it only displays players in a specific group, do the following:
         1.  Create a player set containing the players you want to display.
-            Check out the [Player Sets](Player Sets) wiki page for more information.
+            Check out the [Player Sets](Player-Sets) wiki page for more information.
         2.  Set `playerSet` to the name of the player set you created in step i.
 
     * ##### `playerOrder`
     
         The `playerOrder` option specifies the order in which players are displayed on the tab list.
-        Have a look at the [Player Order](Player Order) wiki page for more information.
+        Have a look at the [Player Order](Player-Order) wiki page for more information.
     
     * ##### `worldHeader`
     
         The `worldHeader` option specifies a list of custom slots displayed
          for each world above the players on that world. Here two special placeholders
-         `${world}` and `${world_player_count}` can be used to display the name of the
+         `${world name}` and `${world player_count}` can be used to display the name of the
          world and the number of players on it.
     
     * ##### `worldFooter`
     
         The `worldFooter` specifies a list of custom slots displayed
          for each world below the players on that world. Here two special placeholders
-         `${world}` and `${world_player_count}` can be used to display the name of the
+         `${world name}` and `${world player_count}` can be used to display the name of the
          world and the number of players on it.
     
     * ##### `worldSeparator`
@@ -499,7 +502,7 @@ The following components are available:
    
    _Schema:_
    ```yaml
-   !players_by_server
+   !players_by_world
    playerSet: <String>
    playerOrder: <String>
    worldHeader: <List of Components>
@@ -564,7 +567,7 @@ The following components are available:
        - "..."
    ```
 
-7. `!spacer` component
+7. ### `!spacer` component
    
    The `!spacer` component can be used to fill part of the tab list with empty slots.
    Those slots will use the icon defined by the `defaultIcon` option and the ping set by the `defaultPing` option.
@@ -585,7 +588,7 @@ The following components are available:
    - {text: "Slot at the very bottom", icon: "colors/gold.png", ping: 0}
    ```
 
-8. `!container` component
+8. ### `!container` component
 
     The `!container` component acts as a wrapper for the other components it contains.
     It allows changing the order in which those components fill the slots of the tab list as well setting a minimum/ maximum for the number of slots used by those components.
@@ -637,3 +640,7 @@ The following components are available:
        playerComponent: "${player vault_prefix}${player name}${afk_tag}"
        morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
    ```
+   
+--------------------------------------------------------------------------------
+
+Next: [Player Order](Player-Order)

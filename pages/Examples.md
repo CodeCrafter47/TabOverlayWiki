@@ -632,6 +632,6 @@ components:
 [!]: endIF
 [!]: ifATO
 
-There are not examples yet :(
+There are no examples yet :(
 
 [!]: endIF

@@ -81,6 +81,8 @@ The following types of custom placeholders are available:
         So if you were to use `%5` somewhere it will not be replaced since you have only 5 (not 6) parameters.
         If you use the placeholder with more parameters that its number of parameters, the last parameter will also contain all the additional parameters.
         
+        [!]: ifBTLP
+        
         _Example:_
         
         Assume you want to create a placeholder that displays `Online` if a server is online and `Offline` if a server is offline.
@@ -99,6 +101,8 @@ The following types of custom placeholders are available:
         You can use that placeholder by using `${server_state <server>}` anywhere in your config.
         Just replace `<server>` with an actual server name.
         E.g. if you want to display whether the `minigames` server is online use `${server_state minigames}`.
+        
+        [!]: endIF
         
     _Schema:_
     ```yaml
@@ -316,7 +320,7 @@ customPlaceholders:
 ```
 
 Using the `${player is_hidden}` placeholder in the condition makes this custom placeholder work with all vanish plugins supported by !!name.
-Have a look at the [Hidden Players](Hidden Players) page for more information on vanish support.
+Have a look at the [Hidden Players](Hidden-Players) page for more information on vanish support.
 
 [!]: ifBTLP
 #### Creating the `${server_state}` Placeholder to Display Whether a Server is Online

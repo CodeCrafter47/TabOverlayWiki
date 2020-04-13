@@ -92,7 +92,6 @@
  * ##### `/ato info`
    
    Required permission: `advancedtaboverlay.admin`
-   Required permission: `advancedtaboverlay.admin`
    
  * ##### `/ato reload`
    

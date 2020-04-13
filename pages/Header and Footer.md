@@ -30,7 +30,7 @@ The following options in the tab list configuration file control the appearance 
     header: |-
       &cWelcome &f${viewer name}
       &7Total players:&f ${playerset:all_players size}
-      &f&nPowered by BungeeTabListPlus
+      &f&nPowered by !!name
     ```
     
     ###### Single Line, Animated Header
@@ -73,4 +73,4 @@ The following options in the tab list configuration file control the appearance 
 
 --------------------------------------------------------------------------------
 
-Next: [Configuration Basics Part 4 - Player sets](Configuration-Basics-Part-4---Player-sets)
+Next: [Dynamic Size Tab List](Dynamic-Size-Tab-List)

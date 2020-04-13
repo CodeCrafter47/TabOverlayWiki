@@ -176,7 +176,7 @@ want to use it as condition in the _conditional component_.
  
  * `${other_count}` for use in the `morePlayersComponent` option of all components that add players to the tab list.
  
- * `${playerset:<name> size}` number of players in a player set. See [Player sets](PlayerSets).
+ * `${playerset:<name> size}` number of players in a player set. See [Player sets](Player-Sets).
  
  * `${viewer skin}`
  

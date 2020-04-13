@@ -33,8 +33,10 @@ Examples:
 ${player name}
 ${viewer uuid}
 ${playerset:global size}
+[!]: ifBTLP
 ${server:lobby online}
 ${viewer server tps}
+[!]: endIF
 ```
 
 Binary Operators
@@ -63,7 +65,12 @@ Examples:
 ${viewer name} == "CodeCrafter47"
 ${viewer ping} <= 50 
 50 < ${viewer ping} <= 150 
+[!]: ifBTLP
 ${viewer server} == "survival" and ${viewer world} == "world_nether"
+[!]: endIF
+[!]: ifATO
+${viewer world} == "world" or ${viewer world} == "world_nether"
+[!]: endIF
 ```
 
 Parenthesis
@@ -72,7 +79,12 @@ Parenthesis
 
 Example:
 ```
+[!]: ifBTLP
 (${viewer server} == "survival" and ${viewer world} == "world_nether") or (${viewer group} == "Admin")
+[!]: endIF
+[!]: ifATO
+(${viewer world} == "world" or ${viewer world} == "world_nether") and (${viewer group} == "Admin")
+[!]: endIF
 ```
 
 Negation
@@ -81,6 +93,12 @@ You can use `!` to negate boolean expressions.
 
 Examples:
 ```
+[!]: ifBTLP
 !${server:lobby online}
 !(${viewer server} == "survival" and ${viewer world} == "world_nether")
+[!]: endIF
+[!]: ifATO
+!${viewer essentials_akf}
+!(${viewer world} == "world")
+[!]: endIF
 ```

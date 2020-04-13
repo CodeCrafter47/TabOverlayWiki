@@ -12,6 +12,7 @@ fun main() {
         "icons/",
         "advancedtaboverlay.seehidden"
     )
+    // todo check links
 }
 
 fun update_wiki(
@@ -25,6 +26,10 @@ fun update_wiki(
 ) {
 
     val prevFiles = target.listFiles().filter { it.isFile && it.name.endsWith(".md") }.map { it.name }.toMutableList()
+    val linkTargets =
+        pagesSrc.listFiles()
+            .filter { it.isFile && it.name.endsWith(".md") }
+            .map { it.name.replace(".md", "").replace(" ", "-") }
 
     // copy images
     imagesSrc.listFiles()
@@ -69,6 +74,11 @@ fun update_wiki(
             for ((line, text) in lines.withIndex()) {
                 if (text.contains("[!]"))
                     println("TODO: [!] ${file.name} $line")
+                "\\[[^]]]+\\]\\((.+)\\)".toRegex().findAll(text).forEach { match ->
+                    if (!linkTargets.contains(match.groupValues[1]) && !match.groupValues[1].startsWith("http")) {
+                        println("Unknown link target: ${file.name} ${match.groupValues[1]} $line")
+                    }
+                }
             }
 
             // remove double blank lines
@@ -80,6 +90,8 @@ fun update_wiki(
                 }
                 if (!blankBefore && text.trim().isEmpty()) {
                     blankBefore = true
+                } else if (!text.trim().isEmpty()) {
+                    blankBefore = false
                 }
             }
             lines = linesNew

@@ -1,18 +1,31 @@
+
 ### General
 
-* [Installation](Installation)
+* [Installing the plugin](Installation)
+* [Global Configuration Options (`config.yml`)](Global-Configuration)
 * [Commands and Permissions](Commands)
-* [List of Placeholders](Placeholders)
+* [Placeholders](Placeholders)
+* [Using PlaceholderAPI Placeholders](PlaceholderAPI)
+* [Configuration Examples](Examples)
 
-### Configuration Basics
+### Tab List Configuration
 
-* [Part 1: Overview](Configuration-Basics-Part-1---Overview)
-* [Part 2: Tablist configuration file structure](Configuration-Basics-Part-2---Tablist-Configuration-File)
-* [Part 3: Header and Footer](Configuration-Basics-Part-3---Header-and-Footer)
-* [Part 4: Player sets](Configuration-Basics-Part-4---Player-sets)
-* [Part 5: Dynamic Size Tablist](Configuration-Basics-Part-5---Dynamic-Size-Tablist)
-* [Part 6: Fixed Size Tablist - Introduction](Configuration-Basics-Part-6---Fixed-Size-Tablist-Introduction)
-* [Part 7: Fixed Size Tablist - Adding Players](Configuration-Basics-Part-7---Fixed-Size-Tablist---Adding-Players)
-* [Part 8: Fixed Size Tablist - The Table Component](Configuration-Basics-Part-8---Fixed-Size-Tablist---Table)
-
-
+* [Overview](Overview)
+* [Player Sets](Player-Sets)
+* [Header and Footer](Header-and-Footer)
+* Tab List Content
+    * [Dynamic Size Tab List](Dynamic-Size-Tab-List)
+    * [Fixed Size Tab List](Fixed-Size-Tab-List)
+        * [Fixed Size Tab List - Displaying Players](Fixed-Size-Tab-List---Displaying-Players)
+        * [Fixed Size Tab List - The Table Component](Fixed-Size-Tab-List---The-Table-Component)
+        * [Vertical Slot Order](Vertical-Slot-Order)
+        * [Component Reference Page](Components)
+    * [Player Order](Player-Order)
+* [Custom Placeholders](Custom-Placeholders)
+* Miscellaneous Topics
+    * [Vanished Player Handling](Hidden-Players)
+    * [Creating Animations](Creating-Animations)
+    * [Displaying Nicknames and Prefixes](Nicknames-and-Prefixes)
+    * [Sorting Players by Rank](Sorting-Players-by-Rank)
+    * [FAQ](FAQ)
+    * [Expression Syntax](Expressions)
