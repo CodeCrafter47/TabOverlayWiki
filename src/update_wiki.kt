@@ -12,7 +12,6 @@ fun main() {
         "icons/",
         "advancedtaboverlay.seehidden"
     )
-    // todo check links
 }
 
 fun update_wiki(

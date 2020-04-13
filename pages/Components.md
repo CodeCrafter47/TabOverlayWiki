@@ -416,7 +416,7 @@ The following components are available:
 [!]: ifATO
 5. ### `!players_by_world` Component
 
-    The `!players_by_world` component adds players to the tab list grouping them by world as seen in the default config.
+    The `!players_by_world` component adds players to the tab list grouping them by world.
     You can customize its appearance using the following options:
     
     * ##### `playerSet`
