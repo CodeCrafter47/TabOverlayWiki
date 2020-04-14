@@ -45,7 +45,7 @@ To sort players by the `weight` of their primary group do the following two step
     playerOrder: "vault_primary_group_weight desc, name asc"
     ```
    
-   Depending on your permission plugin you could replace the `vault_primary_group_weight` placeholder with a plugin specific placeholder such as `luckperms_primary_group_weight`.
+   Depending on your permission plugin you could replace the `vault_primary_group_weight` placeholder with a plugin specific placeholder.
    However, we recommend sticking with the vault placeholder unless you have a specific reason not to use it.
    
 ##### Troubleshooting
