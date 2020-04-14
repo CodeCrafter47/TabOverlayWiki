@@ -113,10 +113,12 @@ Add a dependency to the BungeeTabListPlus API to your maven project.
     }
     ```
 
-2.  Register your variable in onEnable
+2.  Register your variable in `onLoad`:
     ```java
     BungeeTabListPlusAPI.registerVariable(this, new MyVariable());
     ```
+    
+    _Note:_ If you register your variable in `onEnable` instead of `onLoad` this will cause BungeeTabListPlus to print an unknown placeholder warning when your variable is used. Ignoring that warning, your variable will actually work just fine. 
 
 3.  Use your variable:
    
