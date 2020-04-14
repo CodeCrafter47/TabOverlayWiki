@@ -76,6 +76,6 @@ Some global options can be configured in config.yml. Here's a list of all option
   customPlaceholders:
     ...
   ```
-  See [Custom Placeholders](CustomPlaceholders).
+  See [Custom Placeholders](Custom-Placeholders).
   
 [!]: endIF

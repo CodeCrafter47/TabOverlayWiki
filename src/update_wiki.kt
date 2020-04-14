@@ -12,6 +12,17 @@ fun main() {
         "icons/",
         "advancedtaboverlay.seehidden"
     )
+
+    println("Updating BTLP wiki")
+    update_wiki(
+        File("pages"),
+        File("images"),
+        File("BungeeTabListPlus.wiki"),
+        true,
+        "BungeeTabListPlus",
+        "heads/",
+        "bungeetablistplus.seevanished"
+    )
 }
 
 fun update_wiki(

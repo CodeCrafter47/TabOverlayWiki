@@ -536,6 +536,7 @@ components:
 - "custom"
 - "Slots"
 ```
+[!]: endIF
 
 ### Further reading
 
