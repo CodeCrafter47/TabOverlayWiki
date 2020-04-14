@@ -196,11 +196,13 @@ want to use it as condition in the _conditional component_.
 
 These placeholders change arbitrary text to use a specific type set or colors.
 
-| Placeholder | Example | Image |
-| --- | --- | --- |
-| `${uppercase <text>}` | `${uppercase ${viewer name}}` | ![](images/text-transform-uppercase.png)
-| `${lowercase <text>}` | `${lowercase ${viewer name}}` | ![](images/text-transform-lowercase.png)
-| `${small_caps <text>}` | `${small_caps ${viewer name}}` | ![](images/text-transform-smallcaps.png)
-| `${superscript <text>}` | `${superscript ${viewer name}}` | ![](images/text-transform-superscript.png)
-| `${bubbles <text>}` | `${bubbles ${viewer name}}` | ![](images/text-transform-bubbles.png)
-| `${rainbow <text>}` | `${rainbow ${viewer name}}` | ![](images/text-transform-rainbow.png)
+| Placeholder | Image |
+| --- | --- |
+| `${uppercase <text>}` | ![](images/text-transform-uppercase.png)
+| `${lowercase <text>}` | ![](images/text-transform-lowercase.png)
+| `${small_caps <text>}` | ![](images/text-transform-smallcaps.png)
+| `${superscript <text>}` | ![](images/text-transform-superscript.png)
+| `${bubbles <text>}` | ![](images/text-transform-bubbles.png)
+| `${rainbow <text>}` | ![](images/text-transform-rainbow.png)
+
+_Example:_ You can display the name of the player looking at the tab list (viewer) in rainbow colors using `${rainbow ${viewer name}}`.
