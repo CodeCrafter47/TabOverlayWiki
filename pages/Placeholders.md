@@ -191,3 +191,16 @@ want to use it as condition in the _conditional component_.
  * `${server_count online}` displays the number of servers which are up and running.
 
 [!]: endIF
+
+#### Text Transformations
+
+These placeholders change arbitrary text to use a specific type set or colors.
+
+| Placeholder | Example | Image |
+| --- | --- | --- |
+| `${uppercase <text>}` | `${uppercase ${viewer name}}` | ![](images/text-transform-uppercase.png)
+| `${lowercase <text>}` | `${lowercase ${viewer name}}` | ![](images/text-transform-lowercase.png)
+| `${small_caps <text>}` | `${small_caps ${viewer name}}` | ![](images/text-transform-smallcaps.png)
+| `${superscript <text>}` | `${superscript ${viewer name}}` | ![](images/text-transform-superscript.png)
+| `${bubbles <text>}` | `${bubbles ${viewer name}}` | ![](images/text-transform-bubbles.png)
+| `${rainbow <text>}` | `${rainbow ${viewer name}}` | ![](images/text-transform-rainbow.png)
