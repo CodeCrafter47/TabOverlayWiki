@@ -314,6 +314,12 @@ The following components are available:
         | ---- | ----- |
         | ![](images/players-by-server-2.png) | ![](images/players-by-server-3.png) |
     
+    * ##### `prioritizeViewerServer`
+    
+        Setting the `prioritizeViewerServer` option to `true` tells the plugin to use more space for displaying the viewer's server.
+        Instead of using an equal amount of slots for each server, the viewer's server will be given more space if required to fit all its players.
+        The `prioritizeViewerServer` is enabled by default.
+        
     * ##### `hiddenServers`
     
         The `hiddenServers` option specifies a list of servers which will not be displayed.
@@ -386,8 +392,8 @@ The following components are available:
    serverHeader: <List of Components>
    serverFooter: <List of Components>
    serverSeparator: <List of Components>
-   includeEmptyServers: <Boolean>
    showServers: <ALL, ONLINE, NON_EMPTY>
+   prioritizeViewerServer: <true/false>
    hiddenServers: <List of servers>
    playerComponent: <Component or list of components>
    morePlayersComponent: <Component or list of components>
