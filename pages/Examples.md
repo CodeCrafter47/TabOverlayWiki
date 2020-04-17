@@ -240,9 +240,9 @@ type: DYNAMIC_SIZE
 customPlaceholders:
   other_server_prefix: # makes players on other servers gray
     !conditional
-    condition: "${viewer server} == ${player server}"""
-    true: "'"&f"'"
-    false: "'"&7"'"
+    condition: "${viewer server} == ${player server}"
+    true: "&f"
+    false: "&7"
 
 # Hidden players show up on the tab list, avoids glitches
 hiddenPlayers: VISIBLE
