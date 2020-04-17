@@ -240,7 +240,7 @@ type: DYNAMIC_SIZE
 customPlaceholders:
   other_server_prefix: # makes players on other servers gray
     !conditional
-    condition: "${viewer server} == ${player server}"
+    condition: ${viewer server} == ${player server}
     true: "&f"
     false: "&7"
 
