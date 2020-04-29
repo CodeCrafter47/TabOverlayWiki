@@ -68,7 +68,7 @@ Some global options can be configured in config.yml. Here's a list of all option
   Players which you which to be permanently hidden from the tab list. You can also use uuids here. Note that players with the `bungeetablistplus.seevanished` permission will still see these hidden players in their tab list.
 
 * ##### `time-zone: Europe/Berlin`
-  This is the time zone to use for the {time} variable. It can be full name like `America/Los_Angeles` or a custom id like `GMT+8`.
+  This is the time zone to use for the `${time }` placeholder. It can be full name like `America/Los_Angeles` or a custom id like `GMT+8`.
 
 * ##### `customPlaceholders`
   
