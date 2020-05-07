@@ -1,11 +1,19 @@
+
+Some global options can be configured in `config.yml`.
+This page provides a list of all options with detailed description.
+
 [!]: ifATO
 
-These don't exist yet.
-
+* ##### `customPlaceholders`
+  
+  ```yaml
+  customPlaceholders:
+    ...
+  ```
+  See [Custom Placeholders](Custom-Placeholders).
+  
 [!]: endIF
 [!]: ifBTLP
-
-Some global options can be configured in config.yml. Here's a list of all options with detailed description:
   
 * ##### `checkForUpdates: true`
 
