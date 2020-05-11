@@ -12,6 +12,12 @@ This page provides a list of all options with detailed description.
   ```
   See [Custom Placeholders](Custom-Placeholders).
   
+* ##### `disableCustomTabListForSpectators: true`
+
+   Disables the custom tab list for players in spectators mode.
+   As a result those players will see the vanilla tab list of the server.
+   If you do not use this option players in spectator mode will see the fake players created by BungeeTabListPlus in the teleport menu.
+  
 [!]: endIF
 [!]: ifBTLP
   

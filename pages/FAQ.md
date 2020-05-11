@@ -5,13 +5,13 @@ Your server needs to meet the following requirements for the icons to show up:
  * You need to run Minecraft 1.8 or above.
  * Your server cannot run in offline mode (see [#269](https://github.com/CodeCrafter47/BungeeTabListPlus/issues/269)).
 
-[!]: ifBTLP
-
 #### Players in spectator mode cannot see the custom tab list
 
 This is intentional.
 You can use the `disableCustomTabListForSpectators` option in `config.yml` to change that.
 However, displaying the custom tab list to players in spectator mode causes some issues, such as fake players used for custom slots showing up in the teleport menu and other spectators being rendered differently.
+
+[!]: ifBTLP
 
 #### I get `[BungeeTabListPlus] Failed to activate tab overlay ... Unsupported size 80`
 
