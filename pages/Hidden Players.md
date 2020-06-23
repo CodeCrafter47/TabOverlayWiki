@@ -16,6 +16,8 @@ For this to work you must be using one of the following vanish plugins:
 * VanishNoPacket
 * ProxySuite
 * ProtocolVanish
+* StaffFacilities
+* Nucleus
 
 [!]: endIf
 [!]: ifATO
