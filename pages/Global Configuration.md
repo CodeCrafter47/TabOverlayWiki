@@ -91,5 +91,17 @@ This page provides a list of all options with detailed description.
     ...
   ```
   See [Custom Placeholders](Custom-Placeholders).
+
+* ##### `experimentalTabCompleteFixForTabSize80`
+
+  Removes all the `~BTLP...` entries from tab completion if the size of the tab list is 80.
   
+  **Warning:** This option is experimental. Enabling it may break your tab list. If you find any issues report them to <https://github.com/CodeCrafter47/BungeeTabListPlus/issues/384> or on our discord. Feel free to also let us know if this feature works correctly for you.
+
+* ##### `experimentalTabCompleteSmileys`
+
+  Replaces the `~BTLP...` entries in tab completion with some semi-useful unicode characters
+  
+  **Warning:** This option is experimental. Enabling it may break your tab list. If you find any issues report them to <https://github.com/CodeCrafter47/BungeeTabListPlus/issues/384> or on our discord. Feel free to also let us know if this feature works correctly for you.
+
 [!]: endIF
