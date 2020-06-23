@@ -30,6 +30,8 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer bungeecord_display_name}` | `${player bungeecord_display_name}` |
 | `${viewer bungeecord_primary_group}` | `${player bungeecord_primary_group}`
 | `${viewer client_version}` | `${player client_version}`
+| `${viewer client_version_below_1_8}` | `${player client_version_below_1_8}`
+| `${viewer client_version_atleast_1_8}` | `${player client_version_atleast_1_8}`
 | `${viewer server}` | `${player server}`
 | `${viewer session_duration_hours}` | `${viewer session_duration_hours}` |
 | `${viewer session_duration_minutes}` | `${viewer session_duration_minutes}` |

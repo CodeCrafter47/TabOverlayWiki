@@ -13,19 +13,20 @@ However, displaying the custom tab list to players in spectator mode causes some
 
 [!]: ifBTLP
 
-#### I get `[BungeeTabListPlus] Failed to activate tab overlay ... Unsupported size 80`
+#### I get `Size 80 defined in default.yml is not supported by client.`
 
-For 1.7.x clients (and older) the size of the tab list configured in tab list configuration must match the size of the tab list configured in BungeeCord's `config.yml`.
+For 1.7.x clients (and older) the size of the tab list configured in tab list configuration (`default.yml`) must match the size of the tab list configured in BungeeCord's `config.yml`.
 
 #### How to create a separate tab list configuration for 1.7.x players
+
+The following steps allow you to create a separate tab list configuration for players with 1.7.x or even older clients.
 
 1. Create a new file in the `tabLists` folder. A copy of the `default.yml` or one of the examples from the wiki make a good starting point. While the name doesn't really matter, let's assume you called the file `1.7.yml`.
 
 2. Change the `showTo` option of the `1.7.yml` to
    ```yaml
    showTo: |-
-     ${viewer client_version} == "1.7.5"
-     or ${viewer client_version} == "1.7.10"
+     ${viewer client_version_below_1_8}
    ```
    Note that a 1.7.x client identifies as either 1.7.5 or 1.7.10, so it is sufficient to check for those two versions.
 
@@ -51,8 +52,7 @@ For 1.7.x clients (and older) the size of the tab list configured in tab list co
 
 #### Can I use this plugin on Bukkit, i.e. without BungeeCord?
 
-Have a look at AdvancedTabOverlay for a Bukkit port of the plugin. It is still in development, but should work fine.
-* <https://github.com/CodeCrafter47/AdvancedTabOverlay/wiki>
-* <https://ci.codecrafter47.de/job/AdvancedTabOverlay/>
+Have a look at AdvancedTabOverlay for a Bukkit port of the plugin.
+* <https://www.spigotmc.org/resources/advancedtaboverlay.78905/>
    
 [!]: endIF

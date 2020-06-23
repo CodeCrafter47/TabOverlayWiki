@@ -3,7 +3,13 @@
 ### System Requirements
 
 * BungeeCord build 995 or newer
-* You can use the plugin with older Minecraft clients by using the ProtocolSupportBungee plugin
+* Minecraft 1.8 or newer works out of the box.
+
+  To use older Minecraft versions you can use one of the following solutions:
+  - Travertine or a similar BungeeCord fork.
+  - ViaVersion with ViaBackwards and ViaRewind (on BungeeCord).
+  - ProtocolSupportBungee.
+
 * Java 8
 
 ### Installation
