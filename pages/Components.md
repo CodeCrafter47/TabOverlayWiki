@@ -314,6 +314,34 @@ The following components are available:
         | ---- | ----- |
         | ![](images/players-by-server-2.png) | ![](images/players-by-server-3.png) |
     
+    * ##### `mergeServers`
+    
+        The `mergeServers` option makes two or more servers appear as a single server.
+        This is useful e.g. if you have multiple lobby servers.
+        
+        _Schema:_
+        ```yaml
+        mergeServers:
+          <group name>: [<server name>, <servername>, ...]
+          <group name>: [<server name>, <servername>, ...]
+          ...
+        ```
+        
+        Example on using the `mergeServers` option:
+        
+        |  Before | ![](images/mergeservers-before.png)  |
+        | ---- | ----- |
+        | **After** | ![](images/mergeservers-after.png) |
+        
+        ```yaml
+        !players_by_server
+        playerSet: all_players
+        serverHeader: "> &b${server}"
+        mergeServers:
+          lobby: [lobby0, lobby1]  
+        # ...
+        ```
+        
     * ##### `prioritizeViewerServer`
     
         Setting the `prioritizeViewerServer` option to `true` tells the plugin to use more space for displaying the viewer's server.
@@ -393,6 +421,8 @@ The following components are available:
    serverFooter: <List of Components>
    serverSeparator: <List of Components>
    showServers: <ALL, ONLINE, NON_EMPTY>
+   mergeServers:
+     <group name>: [<server name>, <servername>, ...]
    prioritizeViewerServer: <true/false>
    hiddenServers: <List of servers>
    playerComponent: <Component or list of components>
