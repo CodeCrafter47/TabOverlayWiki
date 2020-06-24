@@ -122,13 +122,13 @@ defaultIcon: colors/dark_gray.png
 defaultPing: 1000
 
 components:
-- {text: "&e&l━━━ Staff ━━━", alignment: CENTER}
+- {center: "&e&l━━━ Staff ━━━"}
 - !players
   playerSet: staff
   playerComponent: "${player name}"
   morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
 -
-- {text: "&e&l━━━ Players ━━━", alignment: CENTER}
+- {center: "&e&l━━━ Players ━━━"}
 - !players
   playerSet: nonstaff
   playerComponent: "${player name}"
@@ -179,13 +179,13 @@ components:
 - !container
   fillSlotsVertical: true
   components:
-  - {text: "&e&l━━━ Staff ━━━", alignment: CENTER}
+  - {center: "&e&l━━━ Staff ━━━"}
   - !players
     playerSet: staff
     playerComponent: "${player name}"
     morePlayersComponent: {text: "&7... and &e${other_count} &7others", icon: "colors/gray.png", ping: 0}
   -
-  - {text: "&e&l━━━ Players ━━━", alignment: CENTER}
+  - {center: "&e&l━━━ Players ━━━"}
   - !players
     playerSet: non_staff
     playerComponent: "${player name}"

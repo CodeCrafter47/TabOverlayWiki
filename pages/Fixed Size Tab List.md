@@ -274,9 +274,9 @@ components:
 
 #### Text Alignment
 
-Besides `text`, `icon` and `ping` there is a fourth option we can customize
- for a custom slot: The `alignment` option. Here is a small example showing
- what it does:
+Instead of the `text` option we can use the `left`, `center` and `right` options to specify the text to be displayed.
+Using the `left` option will align the specified text to the left of the slots, same as when using the `text` option.
+Using the `center` option will display the text in the middle of the slot and using the `right` option will display the text at the right border of the slot.
 
 ![](images/fixed-size-4.png)
 
@@ -297,11 +297,18 @@ defaultIcon: colors/black.png
 defaultPing: 1000
 
 components:
-- {text: "Slot 1", alignment: LEFT}
-- {text: "Slot 2", alignment: CENTER}
-- {text: "Slot 3", alignment: CENTER}
-- {text: "Slot 4", alignment: RIGHT}
+- {left: "Slot 1"}
+- {center: "Slot 2"}
+- {center: "Slot 3"}
+- {right: "Slot 4"}
 ```
+
+You can also use the `left`, `center` and `right` options simultaneously to display multiple pieces of text with different alignment.
+In the following example we display the name and ping of a player.
+```yaml
+playerComponent: {left: "${player name}", right: "${player ping}"}
+```
+![](images/alignment-ping.png)
 
 --------------------------------------------------------------------------------
 

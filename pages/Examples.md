@@ -518,9 +518,9 @@ components:
 - 
 - 
 - 
-- {text: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
-- {text: "&e&lAdmins", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
-- {text: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
+- {center: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000}
+- {center: "&e&lAdmins", icon: "colors/dark_gray.png", ping: 1000}
+- {center: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000}
 - !players
   playerSet: admins
   playerComponent: "${player name}"
@@ -529,9 +529,9 @@ components:
 -
 -
 -
-- {text: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
-- {text: "&e&lPlayers", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
-- {text: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000, alignment: CENTER}
+- {center: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000}
+- {center: "&e&lPlayers", icon: "colors/dark_gray.png", ping: 1000}
+- {center: "&e&l━━━━━━━━━━", icon: "colors/dark_gray.png", ping: 1000}
 - !players
   playerSet: nonadmins
   playerComponent: "${player name}"
@@ -608,7 +608,7 @@ components:
     - !conditional
       condition: ${viewer faction_name} == ""
       true: # Not in a faction
-      - {text: "&6Faction list", icon: "colors/gold.png", alignment: CENTER}
+      - {center: "&6Faction list", icon: "colors/gold.png"}
       -
       -
       -
@@ -617,11 +617,11 @@ components:
       -
       -
       -
-      - {text: "Not in a Faction", alignment: CENTER}
-      - {text: "Join one!", alignment: CENTER}
+      - {center: "Not in a Faction"}
+      - {center: "Join one!"}
       false: # Member of a faction
-      - {text: "&6Faction &f${viewer faction_name}", icon: "colors/gold.png", alignment: CENTER}
-      - {text: "&f${playerset:faction size} of ${viewer faction_member_count} &6Online", icon: "colors/gold.png", alignment: CENTER}
+      - {center: "&6Faction &f${viewer faction_name}", icon: "colors/gold.png"}
+      - {center: "&f${playerset:faction size} of ${viewer faction_member_count} &6Online", icon: "colors/gold.png"}
       - 
       - !players 
         playerSet: faction

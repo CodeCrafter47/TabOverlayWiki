@@ -101,7 +101,7 @@ defaultPing: 1000
 
 components:
 -
-- {text: "&bWelcome", alignment: RIGHT}
+- {right: "&bWelcome"}
 - "${viewer name}"
 -
 -
@@ -137,7 +137,7 @@ defaultPing: 1000
 
 components:
 -
-- {text: '&bWelcome', alignment: RIGHT}
+- {right: '&bWelcome'}
 - '${viewer name}'
 -
 -
@@ -177,7 +177,7 @@ defaultPing: 1000
 
 components:
 -
-- {text: '&bWelcome', alignment: RIGHT}
+- {right: '&bWelcome'}
 - '${viewer name}'
 -
 -
@@ -247,9 +247,9 @@ components:
 - 
 - 
 - 
-- {text: "&e&l━━━━━━━━━━", alignment: CENTER}
-- {text: "&e&lStaff", alignment: CENTER}
-- {text: "&e&l━━━━━━━━━━", alignment: CENTER}
+- {center: "&e&l━━━━━━━━━━"}
+- {center: "&e&lStaff"}
+- {center: "&e&l━━━━━━━━━━"}
 - !players
   playerSet: staff
   playerComponent: "${player name}"
@@ -258,9 +258,9 @@ components:
 -
 -
 -
-- {text: "&e&l━━━━━━━━━━", alignment: CENTER}
-- {text: "&e&lPlayers", alignment: CENTER}
-- {text: "&e&l━━━━━━━━━━", alignment: CENTER}
+- {center: "&e&l━━━━━━━━━━"}
+- {center: "&e&lPlayers"}
+- {center: "&e&l━━━━━━━━━━"}
 - !players
   playerSet: non_staff
   playerComponent: "${player name}"
@@ -303,7 +303,7 @@ defaultPing: 1000
 
 components:
 -
-- {text: "&bWelcome", alignment: RIGHT}
+- {right: "&bWelcome"}
 - "${viewer name}"
 -
 - !players_by_server
@@ -399,7 +399,7 @@ defaultPing: 1000
 components:
 # Use colors/gray.png as icon for the first row
 - {icon: colors/gray.png}
-- {text: "&bWelcome", alignment: RIGHT, icon: colors/gray.png}
+- {right: "&bWelcome", icon: colors/gray.png}
 - {text: "${viewer name}", icon: colors/gray.png}
 - {icon: colors/gray.png}
 # add another row of empty slots here:
@@ -465,7 +465,7 @@ defaultPing: 1000
 
 components:
 - {icon: colors/gray.png}
-- {text: "&bWelcome", alignment: RIGHT, icon: colors/gray.png}
+- {right: "&bWelcome", icon: colors/gray.png}
 - {text: "${viewer name}", icon: colors/gray.png}
 - {icon: colors/gray.png}
 -
@@ -509,7 +509,7 @@ defaultPing: 1000
 
 components:
 - {icon: colors/gray.png}
-- {text: "&bWelcome", alignment: RIGHT, icon: colors/gray.png}
+- {right: "&bWelcome", icon: colors/gray.png}
 - {text: "${viewer name}", icon: colors/gray.png}
 - {icon: colors/gray.png}
 -

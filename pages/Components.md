@@ -36,12 +36,35 @@ The following components are available:
         | 300 - 599 | three bars           | ![](images/ping_bar_300.png)  |
         | 600 - 999 | two bars             | ![](images/ping_bar_600.png)  |
         | > 1000    | one bar              | ![](images/ping_bar_1000.png) |
+        
+   * ##### `left`
+   
+        The `left` option sets the text displayed in the slot with alignment to the left.
+        You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
+        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can display information using placeholders.
+        
+   * ##### `center`
+   
+        The `center` option sets the text displayed in the slot with alignment to the middle.
+        You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
+        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can display information using placeholders.
+        
+   * ##### `right`
+   
+        The `right` option sets the text displayed in the slot with alignment to the right.
+        You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
+        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can display information using placeholders.
    
    * ##### `text`
    
         The `text` option controls the text displayed in the slot.
         You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
         You can display information using placeholders.
+        
+        _Notice:_ Instead of using the `text` and `alignment` options we recommend you use the newer `left`, `center` and `right` options which allow you to have multiple pieces of text with different alignment in the same slot.
         
    * ##### `alignment`
    
@@ -56,6 +79,8 @@ The following components are available:
        ```yaml
        {text: "At the right", icon: "image.png", ping: 0, alignment: RIGHT}
        ```
+        
+        _Notice:_ Instead of using the `text` and `alignment` options we recommend you use the newer `left`, `center` and `right` options which allow you to have multiple pieces of text with different alignment in the same slot.
         
    * ##### `longText`
    
