@@ -4,9 +4,11 @@
 * [Installation](Installation)
 * [`config.yml`](Global-Configuration)
 * [Commands](Commands)
+* [Text Format](Text-Format)
 * [Placeholders](Placeholders)
 * [PlaceholderAPI](PlaceholderAPI)
 * [Examples](Examples)
+* [FAQ](FAQ)
 
 ### Tab List Configuration
 
@@ -28,5 +30,4 @@
 * [Creating Animations](Creating-Animations)
 * [Displaying Nicknames and Prefixes](Nicknames-and-Prefixes)
 * [Sorting Players by Rank](Sorting-Players-by-Rank)
-* [FAQ](FAQ)
 * [Expression Syntax](Expressions)

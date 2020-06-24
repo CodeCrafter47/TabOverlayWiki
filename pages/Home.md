@@ -9,9 +9,11 @@ _This plugin is in an early stage of development. Not everything is working perf
 * [Installing the plugin](Installation)
 * [Global Configuration Options (`config.yml`)](Global-Configuration)
 * [Commands and Permissions](Commands)
+* [Text Format](Text-Format)
 * [Placeholders](Placeholders)
 * [Using PlaceholderAPI Placeholders](PlaceholderAPI)
 * [Configuration Examples](Examples)
+* [FAQ](FAQ)
 
 ### Tab List Configuration
 
@@ -32,7 +34,6 @@ _This plugin is in an early stage of development. Not everything is working perf
     * [Creating Animations](Creating-Animations)
     * [Displaying Nicknames and Prefixes](Nicknames-and-Prefixes)
     * [Sorting Players by Rank](Sorting-Players-by-Rank)
-    * [FAQ](FAQ)
     * [Expression Syntax](Expressions)
 
 ### Developer Resources

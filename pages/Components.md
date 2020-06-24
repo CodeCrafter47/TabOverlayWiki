@@ -41,27 +41,31 @@ The following components are available:
    
         The `left` option sets the text displayed in the slot with alignment to the left.
         You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
-        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can use legacy formatting codes using the `§` or the `&` sign.
+        Have a look at the [Text Format](Text-Format) page to learn about all options for selecting color, formatting and fonts.
         You can display information using placeholders.
         
    * ##### `center`
    
         The `center` option sets the text displayed in the slot with alignment to the middle.
         You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
-        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can use legacy formatting codes using the `§` or the `&` sign.
+        Have a look at the [Text Format](Text-Format) page to learn about all options for selecting color, formatting and fonts.
         You can display information using placeholders.
         
    * ##### `right`
    
         The `right` option sets the text displayed in the slot with alignment to the right.
         You can use the `left`, `center` and `right` options simultaneously, to have different pieces of text with different alignment in the same slot.
-        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can use legacy formatting codes using the `§` or the `&` sign.
+        Have a look at the [Text Format](Text-Format) page to learn about all options for selecting color, formatting and fonts.
         You can display information using placeholders.
    
    * ##### `text`
    
         The `text` option controls the text displayed in the slot.
-        You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+        You can use legacy formatting codes using the `§` or the `&` sign.
+        Have a look at the [Text Format](Text-Format) page to learn about all options for selecting color, formatting and fonts.
         You can display information using placeholders.
         
         _Notice:_ Instead of using the `text` and `alignment` options we recommend you use the newer `left`, `center` and `right` options which allow you to have multiple pieces of text with different alignment in the same slot.

@@ -14,7 +14,8 @@ The following options in the tab list configuration file control the appearance 
     The `headerAnimationUpdateInterval` option selects the interval (in seconds) at which the header animation switches to the next line.
     If you do not have an animation in the header you can remove the `headerAnimationUpdateInterval` option  from your tab list configuration file.
     
-    You can use [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes) using the `§` or the `&` sign.
+    You can use legacy formatting codes using the `§` or the `&` sign.
+    Have a look at the [Text Format](Text-Format) page to learn about all options for selecting color, formatting and fonts.
     You can display information using placeholders.
     When using a player-bound placeholder you must use the `viewer` variant of  that placeholder.
     
