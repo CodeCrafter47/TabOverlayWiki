@@ -104,3 +104,10 @@ playerSets:
     filter: all
     hiddenPlayers: VISIBLE
 ```
+
+[!]: ifBTLP
+### Troubleshooting
+
+You can use the `/btlp debug hidden [player]` command to get the plugin to tell you whether it considers a player hidden, why it does so and whether a player has the permission to see other hidden players.
+
+[!]: endIf
