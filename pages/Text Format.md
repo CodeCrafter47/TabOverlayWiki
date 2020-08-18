@@ -9,7 +9,8 @@ The following image demonstrates the effect of different formatting codes on the
 
 **Note:** This feature is only available on 1.16 or later. If there are older clients connected to the server this won't work.
 
-You can use `[color=#RRGGBB]` to use any color in hexadecimal notation.
+You can use `&#RRGGBB` or `[color=#RRGGBB]` to use any color in hexadecimal notation.
+You have to replace `#RRGGBB` with a color in hexadecimal notation, e.g. `#012345`.
 
 ![](images/rgb-colors.png)
 
