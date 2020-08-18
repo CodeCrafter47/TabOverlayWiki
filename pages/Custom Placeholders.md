@@ -242,6 +242,256 @@ The following types of custom placeholders are available:
     ```yaml
     <name>: <Text>
     ```
+
+6. #### Color Animation
+
+    The `!color_animation` custom placeholder allows creating color gradients and rainbow-like animations in a simple way.
+    It has the following options:
+    
+    * ##### `colors`
+    
+        The `colors` is a list of colors used in the animation. A color can be a legacy color code such as `&a` or an rgb color such as `#012345`.
+    
+    * ##### `distance`
+    
+        The distance between two colors. If this is not set, the distance is calculated such that the first color is applied to the first letter of the text and the last color is applied to the last letter of the text.
+        
+    * ##### `speed`
+    
+        Determines how fast the colors move through the text. Can be negative to inverse the direction.
+        
+    _Schema:_
+    ```yaml
+    <name>:
+      !color_animation
+      colors: [<color>, <color>, ..., <color>]
+      distance: <Number>
+      speed: <Number>
+    ```
+   
+   _Example:_
+   The following example creates the `${my_rainbow <text>}` placeholder which applies a slowly shifting rainbow effect to the text. It can be used e.g. using `${my_rainbow This is some lovely rainbow text}`.
+   
+   ```yaml
+   customPlaceholders:
+     my_rainbow:
+       !color_animation
+       colors: ['#FF0000', '#FFA500', '#FFFF00', '#32CD32', '#00BFFF', '#8A2BE2', '#EE82EE']
+   ```
+
+7. #### Progress Bars
+
+    The `!progress_bar` custom placeholder creates a progress bar.
+    
+    _Example:_
+       The following example creates the `${health_bar}` placeholder which display the health of the player looking at the tab list.
+       
+    ```yaml
+    customPlaceholders:
+      health_bar:
+        !progress_bar
+        value: ${viewer health}
+        maxValue: ${viewer max_health}
+        style: hearts
+    ```
+       
+    #### Basic options
+    The following options you will typically use when creating a progress bar:
+    
+    * ##### `value`
+    
+        Expression for the number the progress bar will be based on.
+        
+    * ##### `minValue`
+    
+        Expression for the number corresponding to 0%.
+        If not set the default is 0.
+    
+    * ##### `maxValue`
+    
+        Expression for the number corresponding to 100%.
+    
+    * ##### `style`
+    
+        Style preset. This options allows you use one of the pre-made styles.
+        Using one of the pre-made style sets of the `symbolX`, `borderX`, `colorX` and `length` options.
+        You can set any of those options yourself, which will take precedence over the pre-definded value, to further customize the appearance of the progress bar.
+        
+        The following style presets are available:
+        - default
+        - largediv
+        - tricolor
+        - default_shaded
+        - largediv_shaded
+        - tricolor_shaded
+        - hearts
+        Shaded variants only work for Minecraft 1.16 or later.
+    
+    * ##### `length`
+    
+        Length of the progress bar (number of symbols the progress bar is made up of).
+    
+    * ##### `textCenter`
+    
+        Text to be displayed on the center of the progress bar. This is optional. If specified
+        it will replace some of the symbols at the middle of the progress bar. You can use it
+        e.g. to display the progress percentage or to display the underlying value of the progress
+        bar. The special placeholders `${progress_percentage}`, `${progress_value}`,
+        `${progress_min}` and `${progress_max}` can be used to access the percentage
+        and value of the progress as well as the minimum and maximum value.
+        This should not contain color codes. The text is colored with colors provided by the
+        colorCompleted, colorRemaining and other color options.
+    
+    * ##### `colorCompleted`
+    
+        Color to use for completed progress.
+    
+    * ##### `colorRemaining`
+    
+        Color to use for remaining progress.
+    
+    #### Advanced options
+    These options allow you to completely customize the appearance of a progress bar.
+    
+    * ##### `symbolCompleted`
+    
+        Symbol (or text) to be used for completed progress. This should not contain color codes.
+        Color codes should be added using the colorCompleted option (or related options).
+    
+    * ##### `symbolRemaining`
+    
+        Symbol (or text) to be used for remaining progress. This should not contain color codes.
+        Color codes should be added using the colorRemaining option (or related options).
+    
+    * ##### `symbolCurrent`
+    
+        Symbol (or text) to be used for current progress (head of the progress bar). This should not contain color codes.
+        Color codes should be added using the colorCurrent option (or related options).
+    
+    * ##### `symbolCurrentSteps`
+    
+        List of symbols (or text) to be used for current progress. By providing multiple symbols
+        the progress can be divided in smaller steps. E.g. providing a half filled heart and a
+        filled heart will display the half filled heart as an in between step to displaying the
+        filled heart.
+        This should not contain color codes. Color codes should be added using the
+        colorCurrent option (or related options).
+        This option is mutually exclusive with symbolCurrent.
+        
+        _Example:_
+        ```yaml
+        symbolCurrentSteps: ["\u25CC", "\u25D0"]
+        ```
+    
+    * ##### `borderLeft`
+    
+        Left border of the progress bar. Does not count towards length.
+    
+    * ##### `borderRight`
+    
+        Right border of the progress bar. Does not count towards length.
+    
+    * ##### `textCenterEmpty`
+    
+        Text to be displayed on the center of the progress bar when it is empty, i.e. the
+        progress is 0.
+    
+    * ##### `textCenterFull`
+    
+        Text to be displayed on the center of the progress bar when it is full, i.e. the
+        progress is 100.
+    
+    * ##### `colorCompletedSteps`
+    
+        Specifies the color to use for completed progress. Divides the progress bar into multiple
+        segments with different color. The number is the percentage where the color is first used.
+        E.g. if there are two entries `i: c1` and `j: c2` then the color c1 ist used in the
+        interval from i to j - 1.
+        This option is mutually exclusive with colorCompleted.
+        
+        _Example:_
+        ```yaml
+        colorCompletedSteps:
+          0: "&a"
+          60: "&e"
+          80: "&c"
+        ```
+    
+    * ##### `colorCompletedInterpolateSteps`
+    
+        If enabled the color for completed progress is interpolated between individual progress points specified by colorCompletedSteps.
+        This can only be used in conjunction with colorCompletedSteps and thus is mutually
+        exclusive to colorCompleted.
+        This option only works on Minecraft 1.16+.
+    
+    * ##### `colorCurrent`
+    
+        Color to use for current progress, i.e. the symbol that is the head of the progress bar.
+        This is optional. If not set it defaults to the value of colorCompleted.
+    
+    * ##### `colorCurrentInterpolate`
+    
+        If enable the color to use for current progress, i.e. the symbol that is the head of the
+        progress bar, is interpolated between the color used for remaining progress and the color
+        used for completed progress.
+        This option is mutually exclusive to colorCurrent.
+        This option only works on Minecraft 1.16+.
+    
+    * ##### `colorRemainingSteps`
+    
+        Specifies the color to use for remaining progress. Divides the progress bar into multiple
+        segments with different color. The number is the percentage where the color is first used.
+        E.g. if there are two entries `i: c1` and `j: c2` then the color c1 ist used in the
+        interval from i + 1 to j.
+        To specify the color for remaining progress there are
+        three options with are mutually exclusive:
+        - `colorRemaining`
+        - `colorRemainingSteps` and `colorRemainingInterpolateSteps`
+        - `colorRemainingFromColorCompleted`
+    
+    * ##### `colorRemainingInterpolateSteps`
+    
+        If enabled the color for remaining progress is interpolated between individual progress points specified by colorRemainingSteps.
+        This can only be used in conjunction with colorRemainingSteps and thus is mutually
+        exclusive to colorRemaining.
+        This option only works on Minecraft 1.16+.
+    
+    * ##### `colorRemainingFromColorCompleted`
+    
+        If enabled the color for remaining progress is computed as a dark version of the color for completed progress.
+        This option only works on Minecraft 1.16+.
+    
+    * ##### `colorEmptyBar`
+    
+        Color to use for the bar when it is empty, i.e. the progress is 0. This is optional.
+        If not set it defaults to the color used for remaining progress.
+    
+    * ##### `colorFullBar`
+    
+        Color to use for the bar when it is full, i.e. the progress is 100. This is optional.
+        If not set it defaults to the color used for completed progress.
+    
+    * ##### `emptyBarShowSymbols`
+    
+        Whether the progress symbols are shown if the bar is empty. If this is set to false the
+        symbols will be replaced with spaces.
+    
+    * ##### `fullBarShowSymbols`
+    
+        Whether the progress symbols are shown if the bar is full. If this is set to false the
+        symbols will be replaced with spaces.
+    
+    * ##### `emptyBar`
+    
+        Text to replace the entire progress bar with, if it is empty i.e. the progress is 0.
+        This is optional. If used this text will be shown instead of the entire bar
+        (including the border) when the progress is 0.
+    
+    * ##### `fullBar`
+    
+        Text to replace the entire progress bar with, if it is full i.e. the progress is 100.
+        This is optional. If used this text will be shown instead of the entire bar
+        (including the border) when the progress is 100.
    
 ### Useful Custom Placeholders
 
