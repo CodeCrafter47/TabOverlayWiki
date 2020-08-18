@@ -44,6 +44,9 @@ The _direction_ can be one of three values:
  * `asc`, which is short for ascending. This leads to the order `a, b, c, ...` or `1, 2, 10, ...`. This is the default direction if you do not specify any.
  * `desc`, which is short for descending. This leads to the order `z, y, x, ... a` or `50, 20, 15, ...`.
  * `viewer-first`. This special "direction" causes players for whom the placeholder has the same value as for the viewer (player looking at the tab list) to appear before players for whom the placeholder has a different value.
+ * `custom`, which allows you to specify a custom order. The way to use it is to write the values of the placeholder separated by a space after the `custom` keyword, in the order you want them to appear in.
+ 
+    E.g. assume you want to order players by their group. You use the `vault_primary_group` placeholder. You have three groups: `Admin`, `Moderator` and `Default` which you want to appear in that order. The resulting comparison rule is `vault_primary_group custom Admin Moderator Default`.
 
 ### Useful Values for `playerOrder`
 
