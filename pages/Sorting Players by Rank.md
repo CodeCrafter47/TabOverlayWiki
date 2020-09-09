@@ -2,6 +2,32 @@
 
 Make sure you have read the [Player Order](Player-Order) page before reading this page.
 
+### Using the Primary Group and a `custom` order
+
+This is the easiest method as it does not requite changing any of your permission plugins configuration.
+We'll explain using an example.
+Assume you have the groups
+- `Owner`,
+- `Admin`,
+- `Moderator`,
+- `VIP` and
+- `Default`.
+
+Players in the `Owner` group should appear at the top of the tab list, followed by `Admin`'s, `Moderator`'s, `VIP`'s and at last all the players in the `Default` group.
+We set the `playerOrder` option as follows to achieve that:
+```yaml
+playerOrder: vault_primary_group custom Owner Admin Moderator VIP Default
+```
+Let me explain the above.
+- `vault_primary_group` is the placeholder we use to get the primary group of a player.
+- `custom` tells the plugin we want to specify a custom order.
+- `Owner Admin Moderator VIP Default`: These are all our groups listed in the order we want them to appear on the tab list.
+
+To additionally order players of same rank by their name, we can add the `name asc` comparison rule to the `playerOrder` option, which will then look as follows.
+```yaml
+playerOrder: vault_primary_group custom Owner Admin Moderator VIP Default, name asc
+```
+
 ### Using the `weight` of the Primary Group
 
 We can configure the plugin to use the weight of the players primary group to sort the players.
