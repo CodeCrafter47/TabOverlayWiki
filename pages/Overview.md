@@ -212,8 +212,12 @@ As a result of having two different tab list types, some config options are avai
 * ##### `type`
 
     The `type` option decides on the tab list type.
-    It can be set to `FIXED_SIZE` or `DYNAMIC_SIZE`. Depending on
- which one you choose different type specific config options will be available.
+    It can be set to 
+    - `FIXED_SIZE`,
+    - `DYNAMIC_SIZE` or
+    - `HEADER_FOOTER`.
+    
+    Depending on which one you choose different type specific config options will be available.
 
 #### Type Specific Options
 
