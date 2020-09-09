@@ -5,6 +5,9 @@ It is able to adjust its size to the number of players much like vanilla, but it
 The image below shows how a dynamic size tab list can look.
 ![](images/dynamic-size-ato.png)
 
+### Content
+[!]: ToC
+
 ### Example
 
 Here is a simple tab list configuration file to create a dynamic size tab list.

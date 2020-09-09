@@ -1,3 +1,6 @@
+### Content
+[!]: ToC
+
 ### Player bound placeholders
 
 Each player related placeholder comes in two versions: One for the player viewing the tab list on one for a player displayed in the tab list. E.g. to display the players name there is `${viewer name}` and `${player name}`. The first one can be used everywhere, the second one in player slots and filters of player sets.
@@ -5,7 +8,7 @@ Each player related placeholder comes in two versions: One for the player viewin
 In addition to the built-in placeholders presented below you can use placeholders provided by PlaceholderAPI.
 To learn how to use placeholder from PlaceholderAPI have a look at the [PlaceholderAPI](PlaceholderAPI) page.
 
-##### Generic player placeholders
+#### Generic player placeholders
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer display_name}` | `${player display_name}`
@@ -39,12 +42,12 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` |
 [!]: endIF
 
-##### Essentials
+#### Essentials
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer essentials_afk}` | `${viewer essentials_afk}` |
 
-##### Factions
+#### Factions
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer faction_at_current_location}` | `${player faction_at_current_location}`
@@ -55,17 +58,17 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer faction_power}` | `${player faction_power}`
 | `${viewer faction_rank}` | `${player faction_rank}`
 
-##### Multiverse
+#### Multiverse
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer multiverse_world_alias}` | `${player multiverse_world_alias}`
 
-##### PlayerPoints
+#### PlayerPoints
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer player_points}` | `${player player_points}`
 
-##### SimpleClans
+#### SimpleClans
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer SimpleClans_ClanName}` | `${player SimpleClans_ClanName}`
@@ -75,7 +78,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer SimpleClans_ClanColorTag}` | `${player SimpleClans_ClanColorTag}`
 | `${viewer SimpleClans_OnlineClanMembers}` | `${player SimpleClans_OnlineClanMembers}`
 
-##### Vault
+#### Vault
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer vault_balance}` | `${player vault_balance}`
@@ -89,14 +92,14 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer vault_primary_group_prefix}` | `${player vault_primary_group_prefix}`
 | `${viewer vault_suffix}` | `${player vault_suffix}`
 
-##### ASkyBlock
+#### ASkyBlock
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer askyblock_island_level}` | `${player askyblock_island_level}` |
 | `${viewer askyblock_island_name}` | `${player askyblock_island_name}` |
 | `${viewer askyblock_team_leader}` | `${player askyblock_team_leader}` |
 
-##### PartyAndFriends Clans
+#### PartyAndFriends Clans
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer paf_clans_clan_name}` | `${player paf_clans_clan_name}` |
@@ -106,7 +109,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer paf_clans_is_leader}` | `${player paf_clans_is_leader}` |
 
 [!]: ifBTLP
-##### LuckPerms
+#### LuckPerms
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer luckpermsbungee_prefix}` | `${player luckpermsbungee_prefix}` |
@@ -114,7 +117,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer luckpermsbungee_primary_group}` | `${player luckpermsbungee_primary_group}` |
 | `${viewer luckpermsbungee_primary_group_weight}` | `${player luckpermsbungee_primary_group_weight}` |
 
-##### BungeePerms
+#### BungeePerms
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer bungeeperms_display}` | `${player bungeeperms_display}`
@@ -126,7 +129,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer bungeeperms_suffix}` | `${player bungeeperms_suffix}`
 | `${viewer bungeeperms_user_prefix}` | `${player bungeeperms_user_prefix}`
 
-##### BungeeOnlineTime
+#### BungeeOnlineTime
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer bungeeonlinetime_days}` | `${player bungeeonlinetime_days}` |
@@ -135,12 +138,12 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer bungeeonlinetime_minutes}` | `${player bungeeonlinetime_minutes}` |
 | `${viewer bungeeonlinetime_seconds}` | `${player bungeeonlinetime_seconds}` |
 
-##### RedisBungee
+#### RedisBungee
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer redisbungee_server_id}` | `${player redisbungee_server_id}` |
 
-##### Nucleus
+#### Nucleus
 | Viewer Variant | Player Variant
 | ---------------- | --------------------
 | `${viewer nucleus_afk}` | `${player nucleus_afk}` |
@@ -149,7 +152,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 
 ### Server bound placeholders
 
-##### TPS
+#### TPS
    
 `${server:<server name> tps}` Resolves the placeholder for a specific server. Example: `${server:factions tps}`
    
@@ -158,7 +161,7 @@ Analogue there is `${player server tps}`.
 
 `${server tps}` for use in the `serverHeader` of the _players by server_ component.
  
-##### Online state
+#### Online state
  
 `${server:<server name> online}` checks whether a specific server is online. Player and viewer variants exist too but
 I don't think they are very useful. 

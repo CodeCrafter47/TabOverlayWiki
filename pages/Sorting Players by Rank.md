@@ -2,6 +2,9 @@
 
 Make sure you have read the [Player Order](Player-Order) page before reading this page.
 
+There are three options for sorting players by rank explained on this page.
+[!]: ToC
+
 ### Using the Primary Group and a `custom` order
 
 This is the easiest method as it does not requite changing any of your permission plugins configuration.

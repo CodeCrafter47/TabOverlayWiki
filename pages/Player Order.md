@@ -2,6 +2,9 @@ Specifying the order of players on the tab list is done using the `playerOrder` 
 This option is available in the `DYNAMIC_SIZE` tab list type.
 When using the `FIXED_SIZE` tab list type all components which insert players to the tab list allow for setting the `playerOrder` option.
 
+### Content
+[!]: ToC
+
 ### Examples
 We start by looking at some examples:
 

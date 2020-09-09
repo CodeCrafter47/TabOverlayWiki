@@ -5,8 +5,11 @@ Expressions are used at various places in the configuration of the plugin. So he
  i.e. a number will be converted to `false` if it is `0` and to `true` in all other cases, a string will be converted to 
  `true` if it equals `"true"` all other strings will be converted to `false`.
 
-Literals
---------
+### Content
+[!]: ToC
+
+### Literals
+
 1. Any number is an expression, so the following are valid expressions. Examples:
    ```
    0
@@ -23,8 +26,8 @@ Literals
 
 3. The boolean literals are `true`, `false` and `all`(same as `true`).
 
-Placeholders:
--------------
+### Placeholders
+
 
 Any placeholder is a valid expression. See the [full list of placeholders](Placeholders) for more information.
 
@@ -39,8 +42,8 @@ ${viewer server tps}
 [!]: endIF
 ```
 
-Binary Operators
-----------------
+### Binary Operators
+
 
 `<Expression> <Binary Operator> <Expression>` is a valid expression. The following binary operators are available:
 
@@ -73,8 +76,8 @@ ${viewer world} == "world" or ${viewer world} == "world_nether"
 [!]: endIF
 ```
 
-Parenthesis
------------
+### Parenthesis
+
 `( <Expression> )` is a valid expression. Parenthesis can be used to prevent ambiguities.
 
 Example:
@@ -87,8 +90,8 @@ Example:
 [!]: endIF
 ```
 
-Negation
---------
+### Negation
+
 You can use `!` to negate boolean expressions.
 
 Examples:

@@ -1,5 +1,8 @@
 [!]: ifBTLP
 
+### Content
+[!]: ToC
+
 #### Players Grouped by Server
 
 ![](images/default-config.gif)

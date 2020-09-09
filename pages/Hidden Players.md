@@ -5,6 +5,9 @@ It is possible to configure whether vanished players will show up on the tab lis
 
 [!]: endIf
 
+### Content
+[!]: ToC
+
 ### Supported Vanish Plugins
 
 For this to work you must be using one of the following vanish plugins:

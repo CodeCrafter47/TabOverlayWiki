@@ -1,6 +1,9 @@
 This page provides an overview of the available configuration files and
  directories. It explains what is configured in which file.
 
+### Content
+[!]: ToC
+
 ### Directory Structure
 
 On the first startup the plugin creates the default configuration.

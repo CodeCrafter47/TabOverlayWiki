@@ -13,6 +13,9 @@ The following is a very basic way to set the `playerComponent` option:
 playerComponent: "${player name}"
 ```
 
+### Content
+[!]: ToC
+
 ### Using `display_name` or `tab_name`
 
 This is a simple as replacing `${player name}` with `${player display_name}` or `${player tab_name}`.

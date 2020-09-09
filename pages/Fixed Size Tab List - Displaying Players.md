@@ -17,6 +17,9 @@ As you can see the `!players` component just lists the players while the `!playe
 This is done using the `!players` component.
 [!]: endIF
 
+### Content
+[!]: ToC
+
 ### Using the `!players` component
 
 In the following you see a very simplistic example displaying players on the tab list using the `!players` component.

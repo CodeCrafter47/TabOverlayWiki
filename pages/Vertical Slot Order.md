@@ -2,6 +2,9 @@ Usually !!name will fill the slots of the tab list from left to right then top t
 This is different from how vanilla Minecraft does it: top to bottom then left to right.
 However, there are different options available to change that, which are explained below.
 
+### Content
+[!]: ToC
+
 ### Change the Slot Order in the `!players` Component
 
 The `!players` component provides a `fillSlotsVertical` option that can be set to `true` to change the slot order.

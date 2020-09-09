@@ -2,6 +2,9 @@ When creating animation you have two choices:
 Use the `!animated` custom placeholder or the `!animated` component.
 While the custom placeholder can only create animated text, using the `!animated` component allows you to change the icon and ping at the same time.
 
+### Content
+[!]: ToC
+
 ### The `!animated` Custom Placeholder
 
 It is possible to do animations using the `!animated` custom placeholder. The following example creates a `${animated_bars}` placeholder that can be used anywhere on the tab list.

@@ -3,6 +3,9 @@ The plugin uses player sets to display players and player counts in the tab list
 Whenever you want to display a player count, or display players on the tab list the first step is to create a player set containing these players.
 In the following we will have a look at how to create player sets, and you will see various examples for useful player sets.
 
+### Content
+[!]: ToC
+
 ### Creating Player Sets
 You can create a player set by editing the `playerSets` section in the tab list configuration file.
 A simple player set containing all players can be created like this:

@@ -1,6 +1,9 @@
 This page discusses the `FIXED_SIZE` tab list type.
 Using the `FIXED_SIZE` tab list type enables you to have custom text slots and gives you access to a variety of different layouts.
 
+### Content
+[!]: ToC
+
 ### `FIXED_SIZE` Specific Options
 
 First we have a look at the options available specifically for the `FIXED_SIZE` tab list type.

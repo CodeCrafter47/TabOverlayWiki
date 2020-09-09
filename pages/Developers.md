@@ -1,5 +1,8 @@
 [!]: ifBTLP
 
+### Content
+[!]: ToC
+
 ### Maven Repository
 
 To get easy access to the required dependencies you should add my maven repository to your project.

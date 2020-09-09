@@ -1,6 +1,9 @@
 This page shows how to use the _table_ component to customize the layout of
  your tab list.
 
+### Content
+[!]: ToC
+
 [!]: ifATO
 
 ### Splitting the tab list into columns

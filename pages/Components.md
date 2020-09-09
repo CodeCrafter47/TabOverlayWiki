@@ -1,5 +1,8 @@
 The following components are available:
 
+### Content
+[!]: ToC
+
 1. ### Basic Component/ Single Slot
 
    ```yaml

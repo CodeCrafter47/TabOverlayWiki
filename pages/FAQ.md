@@ -1,3 +1,5 @@
+### Content
+[!]: ToC
 
 #### The icons next to the player name in the tab list are not showing up
 
