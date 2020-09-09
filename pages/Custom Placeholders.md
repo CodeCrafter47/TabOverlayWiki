@@ -909,3 +909,38 @@ customPlaceholders:
     - "&d"
     - "&5"
 ```
+
+#### Rainbow Animation
+
+The `!color_animation` custom placeholder type can be used to create animated rainbow-like effects.
+In the following example we create the `my_rainbow` placeholder.
+The custom placeholder specifies the colors to use.
+The text is specified when using the placeholder.
+That way we can apply the effect at multiple places once we've defined the custom placeholder.
+```yaml
+customPlaceholders:
+  my_rainbow:
+    !color_animation
+    colors: ['#FF0000', '#FFA500', '#FFFF00', '#32CD32', '#00BFFF', '#8A2BE2', '#EE82EE']
+```
+
+The above code creates the `${my_rainbow <text>}` placeholder.
+When using that placeholder we have to replace `<text>` with the text we want to apply the effect to.
+E.g. `${my_rainbow Animated Rainbow Text}` will result in ![](images/color_animation_rainbow.png).
+
+#### Static Color Gradients
+
+We can also use the `!color_animation` custom placeholder type to create static color gradients.
+The following example creates the `gradient_blue_white` placeholder which applies a simple color gradient.
+We set the `speed` option to `0` to create a static effect.
+```yaml
+customPlaceholders:
+  gradient_blue_white:
+    !color_animation
+    colors: ['#00FFFF', '#FFFFFF']
+    speed: 0
+```
+
+The above code creates the `${gradient_blue_white <text>}` placeholder.
+When using that placeholder we have to replace `<text>` with the text we want to apply the effect to.
+E.g. `${gradient_blue_white static gradient}` will result in ![](images/color_animation_static.png).
