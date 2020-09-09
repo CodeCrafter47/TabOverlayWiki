@@ -1,7 +1,7 @@
 A custom placeholder is a new placeholder that is created in the config.
 Custom placeholders can
  * be simple aliases,
- * add complex based on placeholders,
+ * add complex logic based on placeholders,
  * create animations or
  * do some basic calculations.
 
