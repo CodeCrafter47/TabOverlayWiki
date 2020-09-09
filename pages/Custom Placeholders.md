@@ -321,13 +321,17 @@ The following types of custom placeholders are available:
         You can set any of those options yourself, which will take precedence over the pre-definded value, to further customize the appearance of the progress bar.
         
         The following style presets are available:
-        - default
-        - largediv
-        - tricolor
-        - default_shaded
-        - largediv_shaded
-        - tricolor_shaded
-        - hearts
+        
+        | style | preview |
+        | ----- | ------- |
+        | `default` | ![](images/progress_bar_default.png) |
+        | `largediv` | ![](images/progress_bar_largediv.png) |
+        | `tricolor` | ![](images/progress_bar_tricolor.png) |
+        | `default_shaded` | ![](images/progress_bar_default_shaded.png) |
+        | `largediv_shaded` | ![](images/progress_bar_largediv_shaded.png) |
+        | `tricolor_shaded` | ![](images/progress_bar_tricolor_shaded.png) |
+        | `hearts` | ![](images/progress_bar_hearts.png) |
+        
         Shaded variants only work for Minecraft 1.16 or later.
     
     * ##### `length`
@@ -344,6 +348,9 @@ The following types of custom placeholders are available:
         and value of the progress as well as the minimum and maximum value.
         This should not contain color codes. The text is colored with colors provided by the
         colorCompleted, colorRemaining and other color options.
+        
+        _Example:_
+        ![](images/progress_bar_centertext.png)
     
     * ##### `colorCompleted`
     
