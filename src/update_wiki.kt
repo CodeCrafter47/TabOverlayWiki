@@ -81,11 +81,39 @@ fun update_wiki(
             }
             lines = linesNew
 
+            linesNew = mutableListOf<String>()
             for ((line, text) in lines.withIndex()) {
-                if (text.contains("[!]"))
+                if (text.contains("[!]: ToC", ignoreCase = true)) {
+                    for (line in lines.subList(line + 1, lines.size)) {
+                        if (line.contains("##### ")) {
+                            // ignore tier 5,6
+                        } else if (line.contains("#### ")) {
+                            // tier 4
+                            val substring = line.substring(line.indexOf("#### ") + 5)
+                            val label = extractLabel(substring)
+                            linesNew.add("    * [$substring]($label)")
+                        } else if (line.contains("### ")) {
+                            // tier 3
+                            val substring = line.substring(line.indexOf("### ") + 4)
+                            val label = extractLabel(substring)
+                            linesNew.add(" * [$substring]($label)")
+                        }
+                    }
+                } else {
+                    linesNew.add(text)
+                }
+            }
+            lines = linesNew
+
+            for ((line, text) in lines.withIndex()) {
+                if (text.contains("[!]")) {
                     println("TODO: [!] ${file.name} $line")
+                }
                 "\\[[^]]+\\]\\(([^)]+)\\)".toRegex().findAll(text).forEach { match ->
-                    if ((!linkTargets.contains(match.groupValues[1]) && !match.groupValues[1].startsWith("http")) || match.groupValues[1].contains(' ')) {
+                    if ((!linkTargets.contains(match.groupValues[1]) && !match.groupValues[1].startsWith("http") && !match.groupValues[1].startsWith("#")) || match.groupValues[1].contains(
+                            ' '
+                        )
+                    ) {
                         println("Unknown link target: ${file.name} ${match.groupValues[1]} $line")
                     }
                 }
@@ -122,4 +150,16 @@ fun update_wiki(
     if (!prevFiles.isEmpty()) {
         println("Old files: ${prevFiles.joinToString()}")
     }
+}
+
+private fun extractLabel(substring: String): String {
+    return "#" + substring
+        .replace("`", "")
+        .replace("$", "")
+        .replace("{", "")
+        .replace("}", "")
+        .replace("!", "")
+        .trim()
+        .replace(" ", "-")
+        .toLowerCase()
 }

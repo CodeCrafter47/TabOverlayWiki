@@ -5,6 +5,9 @@ Custom placeholders can
  * create animations or
  * do some basic calculations.
 
+### Content
+[!]: ToC
+
 ### Creating Custom Placeholders
 
 Custom placeholders can be in the `customPlaceholders` section in `config.yml` as well as in the `customPlaceholders` section of each tab list configuration file.
@@ -243,7 +246,7 @@ The following types of custom placeholders are available:
     <name>: <Text>
     ```
 
-6. #### Color Animation
+6. #### `!color_animation`
 
     The `!color_animation` custom placeholder allows creating color gradients and rainbow-like animations in a simple way.
     It has the following options:
@@ -279,7 +282,7 @@ The following types of custom placeholders are available:
        colors: ['#FF0000', '#FFA500', '#FFFF00', '#32CD32', '#00BFFF', '#8A2BE2', '#EE82EE']
    ```
 
-7. #### Progress Bars
+7. #### `!progress_bar`
 
     The `!progress_bar` custom placeholder creates a progress bar.
     
@@ -295,7 +298,7 @@ The following types of custom placeholders are available:
         style: hearts
     ```
        
-    #### Basic options
+    ##### Basic options
     The following options you will typically use when creating a progress bar:
     
     * ##### `value`
@@ -350,7 +353,7 @@ The following types of custom placeholders are available:
     
         Color to use for remaining progress.
     
-    #### Advanced options
+    ##### Advanced options
     These options allow you to completely customize the appearance of a progress bar.
     
     * ##### `symbolCompleted`
