@@ -175,25 +175,43 @@ want to use it as condition in the _conditional component_.
 
 ### Special placeholders
 
- * `${time <format>}`
+ * #### `${time <format>}`
  
    Displays the current time. Example: `${time HH:mm:ss}`. You can find more information about the date format at <https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html>.
+   
+   _Examples:_
+   
+   | Pattern | Result |
+   | ------- | ------ |
+   | `${time HH:mm:ss}` | `20:51:03` |
+   | `${time h:mm a}` | `8:51 PM` |
+   | `${time dd.MM.yyyy}` | `11.09.2020` |
  
- * `${other_count}` for use in the `morePlayersComponent` option of all components that add players to the tab list.
+ * #### `${other_count}`
+  
+   This placeholder is for use in the `morePlayersComponent` option of all components that add players to the tab list.
  
- * `${playerset:<name> size}` number of players in a player set. See [Player sets](Player-Sets).
+ * #### `${playerset:<name> size}`
+  
+   Displays number of players in a player set. See [Player sets](Player-Sets).
  
- * `${viewer skin}`
+ * #### `${viewer skin}`
  
    Can be used as the `icon` property of a slot to display the skin of the player looking at the tab list.
 
 [!]: ifBTLP
    
- * `${server_player_count}` for use in the `serverHeader` of the _players by server_ component.
+ * #### `${server_player_count}`
+ 
+   For use in the `serverHeader` of the _players by server_ component.
 
- * `${server_count total}` displays the total number of servers in the BungeeCord network.
+ * #### `${server_count total}`
+  
+   Displays the total number of servers in the BungeeCord network.
    
- * `${server_count online}` displays the number of servers which are up and running.
+ * #### `${server_count online}`
+ 
+   Displays the number of servers which are up and running.
 
 [!]: endIF
 
