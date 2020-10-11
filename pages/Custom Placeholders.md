@@ -551,17 +551,17 @@ Let's assume you're not using Essentials but CMI to provide the AFK functionalit
 Now there's no built-in placeholder for CMI, however we can use the one provided by PlaceholderAPI (assuming it's installed).
 However the `cmi_user_afk` placeholder from PlaceholderAPI has one small problem.
 It doesn't evaluate to `true` or `false` like the `essentials_afk` placeholder does.
-Instead, it evaluates to `§6True` if the player is AFK.
+Instead, it evaluates to `§2true` if the player is AFK.
 As you can see it's uppercase and there's a color code.
 This is good if you want to display the placeholder just like that, but it doesn't work well with the Custom Placeholder mechanic.
-To _fix_ this issue we can change the condition to check if the output of the `cmi_user_afk` placeholder is `§6True`. This leads to the following code:
+To _fix_ this issue we can change the condition to check if the output of the `cmi_user_afk` placeholder is `§2true`. This leads to the following code:
 
 ```yaml
 customPlaceholders:
   # ...
   afk_tag:
     !conditional
-    condition: ${player cmi_user_afk} == "§6True"
+    condition: ${player cmi_user_afk} == "§2true"
     true: "&7|&oaway"
     false: ""
 ```
