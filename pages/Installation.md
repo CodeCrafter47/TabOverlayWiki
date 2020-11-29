@@ -14,13 +14,15 @@
 
 ### Installation
 
-1. Download BungeeTabListPlus.jar from the spigotmc website or from jenkins and install it on your BungeeCord server.
+1. Download _BungeeTabListPlus.zip_ from the spigotmc website. You will need the files contained in the zip file for the following steps.
+
+2. Install BungeeTabListPlus.jar on your BungeeCord server.
 
    If you have multiple BungeeCord servers connected using RedisBungee install the plugin on all BungeeCord servers.
 
-2. **Optional:** Download BungeeTabListPlus_BukkitBridge.jar from the spigotmc website or from jenkins and install it on all your Spigot and Bukkit servers.
+2. **Optional but Recommended:** Install BungeeTabListPlus_BukkitBridge.jar on all your Spigot and Bukkit servers.
 
-   This step is required for most variables to work. Also things like VanishNoPacket support will not work without this.
+   This step is required for most placeholders to work. Also things like VanishNoPacket support will not work without this.
    
 [!]: endIF
 [!]: ifATO
