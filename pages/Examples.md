@@ -3,7 +3,7 @@
 ### Content
 [!]: ToC
 
-#### Players Grouped by Server
+### Players Grouped by Server
 
 ![](images/default-config.gif)
 
@@ -109,7 +109,7 @@ customPlaceholders:
     - "&6==============&c=&6"
 ```
 
-#### One Column per Server
+### One Column per Server
 
 ![](images/one-server-per-column.gif)
 
@@ -210,7 +210,7 @@ customPlaceholders:
     false: "&c${viewer ping}"
 ```
 
-#### Global Tab List, Dynamic Size
+### Global Tab List, Dynamic Size
 
 ![](images/dynamic-size-config.png)
 
@@ -260,7 +260,7 @@ playerOrder: "server viewer-first, server asc, name asc"
 playerComponent: "${other_server_prefix}${player name}"
 ```
 
-#### Info Column, Two Columns for One Server, Two Servers in One Column
+### Info Column, Two Columns for One Server, Two Servers in One Column
 
 ![](images/table-demo-config.png)
 
@@ -330,7 +330,7 @@ components:
       maxSize: 9
 ```
 
-#### Using Multiple Slots per Player
+### Using Multiple Slots per Player
 
 ![](images/multiple-columns-config.png)
 
@@ -400,7 +400,7 @@ customPlaceholders:
     false: "&c${player ping}"
 ```
 
-#### Only Display Players on the Same Server
+### Only Display Players on the Same Server
 
 ![](images/currentserver.png)
 
@@ -493,7 +493,7 @@ customPlaceholders:
     - "&6==============&c=&6"
 ```
 
-#### Separate Admins and Regular Players
+### Separate Admins and Regular Players
 
 ![](images/separate-admin-list-config.png)
 
@@ -551,7 +551,7 @@ components:
 - {text: "&cBalance: &6${viewer vault_balance}", icon: "default/balance.png", ping: 0}
 ```
 
-#### Separate Tab List for a Factions Server
+### Separate Tab List for a Factions Server
 
 ![](images/factions-config.gif)
 ```yaml
