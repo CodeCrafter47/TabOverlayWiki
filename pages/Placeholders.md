@@ -44,7 +44,7 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 
 [!]: ifBTLP
 ### Server/Proxy Specific Placeholders
-Some of these placeholders may require the BTLP_Bridge plugin to be installed on the Spigot Servers and may only work when players are on those particular servers.
+Some of these placeholders may require the BungeeTabListPlus_BukkitBridge plugin to be installed on the Spigot Servers and may only work when players are on those particular servers.
 [!]: endIF
 
 #### Essentials
