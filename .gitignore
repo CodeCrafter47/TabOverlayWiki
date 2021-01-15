@@ -1,3 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/workspace.xml
+.idea/
 out/
+lib/
+AdvancedTabOverlay.wiki
+BungeeTabListPlus.wiki

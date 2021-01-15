@@ -1,0 +1,29 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - run: kotlin update_wiki.kts
+      - name: Push ATO Wiki Changes
+        uses: Andrew-Chen-Wang/github-wiki-action@v2
+        if: github.ref == 'refs/heads/master'
+        env:
+          WIKI_DIR: AdvancedTabOverlay.wiki/
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_MAIL: "actions@github.com"
+          GH_NAME: "github-actions[bot]"
+          REPO: "CodeCrafter47/AdvancedTabOverlay"
+      - name: Push BTLP Wiki Changes
+        uses: Andrew-Chen-Wang/github-wiki-action@v2
+        if: github.ref == 'refs/heads/master'
+        env:
+          WIKI_DIR: BungeeTabListPlus.wiki/
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_MAIL: "actions@github.com"
+          GH_NAME: "github-actions[bot]"
+          REPO: "CodeCrafter47/BungeeTabListPlus"
