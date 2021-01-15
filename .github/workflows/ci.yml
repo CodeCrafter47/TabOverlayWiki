@@ -14,7 +14,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         env:
           WIKI_DIR: AdvancedTabOverlay.wiki/
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT }}
           GH_MAIL: "actions@github.com"
           GH_NAME: "github-actions[bot]"
           REPO: "CodeCrafter47/AdvancedTabOverlay"
@@ -23,7 +23,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
         env:
           WIKI_DIR: BungeeTabListPlus.wiki/
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT }}
           GH_MAIL: "actions@github.com"
           GH_NAME: "github-actions[bot]"
           REPO: "CodeCrafter47/BungeeTabListPlus"
