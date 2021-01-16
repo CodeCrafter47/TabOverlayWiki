@@ -1,4 +1,7 @@
-This repository contains the template files from which the wiki for BungeeTabListPlus and AdvancedTabOverlay is generated.
+[BungeeTabListPlus]: https://github.com/CodeCrafter47/BungeeTabListPlus
+[AdvancedTabOverlay]: https://github.com/CodeCrafter47/AdvancedTabOverlay
+
+This repository contains the template files from which the wiki for [BungeeTabListPlus] and [AdvancedTabOverlay] is generated.
 
 Templates for the pages are located in the `pages/` directory.
 Images are located in `images/`.
