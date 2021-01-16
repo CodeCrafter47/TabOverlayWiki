@@ -1,6 +1,9 @@
-name: CI
+name: Deploy BTLP Wiki
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -9,18 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: fwilhe2/setup-kotlin@main
       - run: kotlin update_wiki.kts
-      - name: Push ATO Wiki Changes
-        uses: Andrew-Chen-Wang/github-wiki-action@v2
-        if: github.ref == 'refs/heads/master'
-        env:
-          WIKI_DIR: AdvancedTabOverlay.wiki/
-          GH_TOKEN: ${{ secrets.PAT }}
-          GH_MAIL: ${{ secrets.MAIL }}
-          GH_NAME: "CodeCrafter47"
-          REPO: "CodeCrafter47/AdvancedTabOverlay"
       - name: Push BTLP Wiki Changes
         uses: Andrew-Chen-Wang/github-wiki-action@v2
-        if: github.ref == 'refs/heads/master'
         env:
           WIKI_DIR: BungeeTabListPlus.wiki/
           GH_TOKEN: ${{ secrets.PAT }}

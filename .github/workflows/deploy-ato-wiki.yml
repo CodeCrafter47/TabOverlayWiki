@@ -1,0 +1,22 @@
+name: Deploy ATO Wiki
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fwilhe2/setup-kotlin@main
+      - run: kotlin update_wiki.kts
+      - name: Push ATO Wiki Changes
+        uses: Andrew-Chen-Wang/github-wiki-action@v2
+        env:
+          WIKI_DIR: AdvancedTabOverlay.wiki/
+          GH_TOKEN: ${{ secrets.PAT }}
+          GH_MAIL: ${{ secrets.MAIL }}
+          GH_NAME: "CodeCrafter47"
+          REPO: "CodeCrafter47/AdvancedTabOverlay"
