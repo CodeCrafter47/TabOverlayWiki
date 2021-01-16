@@ -8,6 +8,11 @@ Each player related placeholder comes in two versions: One for the player viewin
 In addition to the built-in placeholders presented below you can use placeholders provided by PlaceholderAPI.
 To learn how to use placeholder from PlaceholderAPI have a look at the [PlaceholderAPI](PlaceholderAPI) page.
 
+[!]: ifBTLP
+Note that some of the placeholders below may need the BungeeTabListPlus_BukkitBridge plugin to be installed on your Spigot Servers.  
+Those placeholders also may only be able to provide values while a player is online on that specific server.
+[!]: endIF
+
 #### Generic player placeholders
 | Viewer Variant                             | Player Variant                             |
 | ------------------------------------------ | ------------------------------------------ |
@@ -40,11 +45,6 @@ To learn how to use placeholder from PlaceholderAPI have a look at the [Placehol
 | `${viewer session_duration_minutes}`       | `${viewer session_duration_minutes}`       |
 | `${viewer session_duration_seconds}`       | `${viewer session_duration_seconds}`       |
 | `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` |
-[!]: endIF
-
-[!]: ifBTLP
-### Server/Proxy Specific Placeholders
-Some of these placeholders may require the BungeeTabListPlus_BukkitBridge plugin to be installed on the Spigot Servers and may only work when players are on those particular servers.
 [!]: endIF
 
 #### Essentials
