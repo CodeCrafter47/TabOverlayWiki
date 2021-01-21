@@ -528,7 +528,7 @@ The following types of custom placeholders are available:
     
     * ##### `defaultReplacement`
         
-        The `defaultReplacement` option defineds the replacement text to be used when there is no suitable replacement in the `replacements` map.
+        The `defaultReplacement` option defines the replacement text to be used when there is no suitable replacement in the `replacements` map.
         
     * ##### `parameters`
         The optional `parameters` option allows creating a custom placeholder with parameters.
