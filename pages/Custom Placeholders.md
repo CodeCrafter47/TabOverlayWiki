@@ -502,7 +502,50 @@ The following types of custom placeholders are available:
         Text to replace the entire progress bar with, if it is full i.e. the progress is 100.
         This is optional. If used this text will be shown instead of the entire bar
         (including the border) when the progress is 100.
-   
+
+8. #### `!select`
+
+    The `!select` custom placeholder can be seen as an enhanced version of the `!switch` custom placeholder.
+    
+    The major difference is that instead of having a `expression` followed by a list of `replacements` do you have the expressions directly within the `replacements` map.
+    
+    * ##### `replacements`
+        
+        The `replacements` options defines a map of different replacements for the `!select` custom placeholder.
+        Unlike the `!switch` custom placeholder does this one have some minor differences. The replacement for the `!select` custom placeholder is selected by
+        1. Evaluating the provided expression within the replacements section and
+        2. Returns the provided value when the defined expression is true or moves on to the next entry or the `defaultReplacement` if it reached the end.
+        
+        _Example:_
+        
+        Assuming you want to return a different color depending on the player's permission, can you use the following code to achieve this:
+        ```yaml
+        replacements:
+          "${player permission color.red}": "&c"
+          "${player permission color.green}": "&a"
+          "${player permission color.white}": "&f"
+        ```
+    
+    * ##### `defaultReplacement`
+        
+        The `defaultReplacement` option defineds the replacement text to be used when there is no suitable replacement in the `replacements` map.
+        
+    * ##### `parameters`
+        The optional `parameters` option allows creating a custom placeholder with parameters.
+        Refer to the `!conditional` custom placeholder type for more information.
+    
+    _Schema:_
+    ```yaml
+    <name>:
+      !select
+      parameters: <Number>
+      replacements:
+        <Expression>: <Text>
+        <Expression>: <Text>
+        ...
+      defaultReplacement: <Text>
+    ```
+    
 ### Useful Custom Placeholders
 
 In the following you will find several useful custom placeholders which you can add to your own configuration.
