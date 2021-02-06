@@ -327,7 +327,7 @@ The following components are available:
     
     * ##### `serverSeparator`
     
-        The `serverFooter` specifies a list of custom slots displayed
+        The `serverSeparator` specifies a list of custom slots displayed
          between each pair of two servers.
     
     * ##### `showServers`
