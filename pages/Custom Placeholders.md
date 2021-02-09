@@ -750,10 +750,10 @@ playerComponent: "${player name} ${colored_ping player}"
 
 #### The `${colored_tps}` Placeholder
 
-In this example we look at how we can add a color code to the ping depending on how good it is.
+In this example we look at how we can add a color code to the tps depending on how good it is.
 The following table shows the desired color scheme:
 
-| Ping | Color |
+| TPS | Color |
 | ---- | ----- |
 | Above 20 | Green |
 | 18 to 20 | Green |
@@ -761,8 +761,7 @@ The following table shows the desired color scheme:
 | 10 to 14 | Orange |
 | 0 to 9 | Red |
 
-We have five cases now, but using a single conditional placeholder we can only distinguish two cases.
-Just like in the Viewer Colored Ping placeholder, we can use multiple conditional placeholders to distinguish multiple. 
+We have five cases now, but using a single conditional placeholder we can only distinguish two cases so we must use multiple conditional placeholders.
 We will need four placeholders in total:
 
 The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
