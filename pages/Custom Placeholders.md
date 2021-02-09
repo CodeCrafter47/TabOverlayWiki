@@ -748,6 +748,70 @@ To display the ping of the players on the tab list we use `player` as parameter:
 playerComponent: "${player name} ${colored_ping player}"
 ```
 
+#### The `${colored_tps}` Placeholder
+
+In this example we look at how we can add a color code to the ping depending on how good it is.
+The following table shows the desired color scheme:
+
+| Ping | Color |
+| ---- | ----- |
+| Above 20 | Green |
+| 18 to 20 | Green |
+| 15 to 17 | Yellow |
+| 10 to 14 | Orange |
+| 0 to 9 | Red |
+
+We have five cases now, but using a single conditional placeholder we can only distinguish two cases.
+Just like in the Viewer Colored Ping placeholder, we can use multiple conditional placeholders to distinguish multiple. 
+We will need four placeholders in total:
+
+The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
+```yaml
+customPlaceholders:
+  colored_tps:
+    !conditional
+    parameters: 1
+    condition: ${server:%0 tps} > 20
+    true: "&a*20.00"
+    false: "&e${colored_tps0 %0}"
+```
+
+The second placeholder `colored_tps0` will check to see if the server's tps is at or above 18, and make it green:
+```yaml
+  colored_tps0:
+    !conditional
+    parameters: 1
+    condition: ${server:%0 tps} >= 18
+    true: &a${server:%0 tps}
+    false: "${colored_tps1 %0}"
+```
+
+The third placeholder `colored_tps1` will check to see if the server's tps is at or above 15, and make it yellow:
+```yaml
+  colored_tps1:
+    !conditional
+    parameters: 1
+    condition: ${server:%0 tps} >= 15
+    true: &e${server:%0 tps}
+    false: "${colored_tps2 %0}"
+```
+
+The fourth and final placeholder `colored_tps2` will check to see if the server's tps is at or above 10, and make it orange and if it is below 10 it will make the color red:
+```yaml
+  colored_tps2:
+    !conditional
+    parameters: 1
+    condition: ${server:%0 tps} >= 10
+    true: &6${server:%0 tps}
+    false: "&c${server:%0 tps}"
+```
+
+Now we can use the `colored_tps` placeholder to give TPS different colors:
+```yaml
+- "&cTPS: ${colored_tps (server)}"
+```
+Keep in mind you will need to define the server you want in the custom placeholder.
+
 #### Creating Custom Prefixes - `${custom_prefix}`
 
 In this example we use the `!switch` custom placeholder type, to create custom prefixes different to the ones from your permission plugin for use in the tab list.
