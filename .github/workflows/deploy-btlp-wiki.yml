@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: fwilhe2/setup-kotlin@main
+        with:
+          install-native: false
       - run: kotlin update_wiki.kts
       - name: Push BTLP Wiki Changes
         uses: Andrew-Chen-Wang/github-wiki-action@v2
