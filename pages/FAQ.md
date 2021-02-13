@@ -56,5 +56,14 @@ The following steps allow you to create a separate tab list configuration for pl
 
 Have a look at AdvancedTabOverlay for a Bukkit port of the plugin.
 * <https://www.spigotmc.org/resources/advancedtaboverlay.78905/>
-   
+
+### Random player icons show up in the bottom right/top left of the tab list
+
+This bug only appears when specific conditions are met:
+
+* Your Tab list doesn't use all 80 available slots.
+* You don't use a playerSet that displays all players from at least the viewer's server.
+
+This is a limitation of MC and the only fix for it is to either use a `FIXED_SIZE` tab list with `size: 80` or a playerSet that displays all the players from the same server as the viewer. See [this question](#how-to-set-that-only-players-on-a-local-server-can-be-seen) for how to make such a playerSet.
+
 [!]: endIF
