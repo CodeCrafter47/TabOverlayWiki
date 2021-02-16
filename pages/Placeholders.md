@@ -234,3 +234,16 @@ These placeholders change arbitrary text to use a specific type set or colors.
 | `${rainbow <text>}`     | ![](images/text-transform-rainbow.png)     |
 
 _Example:_ You can display the name of the player looking at the tab list (viewer) in rainbow colors using `${rainbow ${viewer name}}`.
+
+### Placeholder Options
+
+Depending on the placeholder used can you utilize specific options for it to change the result.  
+These options are always added at the end of the placeholder (Right before the `}`).
+
+ * #### `size`
+ 
+ The `size` option is commonly used for player sets to return the amount of players in it.
+ 
+ * #### `1.2`
+ 
+ Adding a set of numbers divided by a dot will allow you to change the display of any number returned. This is mostly useful for larger numbers or currencies.
