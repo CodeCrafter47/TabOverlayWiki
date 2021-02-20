@@ -36,6 +36,9 @@ First we have a look at the options available specifically for the `FIXED_SIZE` 
     So if you use the `columns` option the tab list can dynamically adjust its size, even though you're using the `FIXED_SIZE` type.
     Note that there is a minimum number of rows depending on the number of columns which limits the amount by which the tab list can grow/ shrink.
     E.g. when using three columns there will be at least 14 rows.
+    
+    Note that the tab will **not** add extra columns to display more players. You have to either use the `DYNAMIC_SIZE` Tab list or the `size` option.  
+    The tab may also bug out when more players are online than what can be displayed on the set amount of columns.
 
 * ##### `defaultIcon`
 
