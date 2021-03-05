@@ -781,7 +781,7 @@ The second placeholder `colored_tps0` will check to see if the server's tps is a
     !conditional
     parameters: 1
     condition: ${server:%0 tps} >= 18
-    true: &a${server:%0 tps}
+    true: "&a${server:%0 tps}"
     false: "${colored_tps1 %0}"
 ```
 
@@ -791,7 +791,7 @@ The third placeholder `colored_tps1` will check to see if the server's tps is at
     !conditional
     parameters: 1
     condition: ${server:%0 tps} >= 15
-    true: &e${server:%0 tps}
+    true: "&e${server:%0 tps}"
     false: "${colored_tps2 %0}"
 ```
 
@@ -801,7 +801,7 @@ The fourth and final placeholder `colored_tps2` will check to see if the server'
     !conditional
     parameters: 1
     condition: ${server:%0 tps} >= 10
-    true: &6${server:%0 tps}
+    true: "&6${server:%0 tps}"
     false: "&c${server:%0 tps}"
 ```
 
