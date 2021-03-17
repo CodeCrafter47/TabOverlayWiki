@@ -764,8 +764,63 @@ The following table shows the desired color scheme:
 We have five cases now, but using a single conditional placeholder we can only distinguish two cases so we must use multiple conditional placeholders.
 We will need four placeholders in total:
 
-[!]: ifBTLP
+[!]: ifATO
+The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
+```yaml
+customPlaceholders:
+  colored_tps:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} > 20
+    true: "&a*20.00"
+    false: "&e${colored_tps0 %0}"
+```
 
+The second placeholder `colored_tps0` will check to see if the server's tps is at or above 18, and make it green:
+```yaml
+  colored_tps0:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} >= 18
+    true: "&a${viewer server_tps_1}"
+    false: "${colored_tps1 %0}"
+```
+
+The third placeholder `colored_tps1` will check to see if the server's tps is at or above 15, and make it yellow:
+```yaml
+  colored_tps1:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} >= 15
+    true: "&e${viewer server_tps_1}"
+    false: "${colored_tps2 %0}"
+```
+
+The fourth and final placeholder `colored_tps2` will check to see if the server's tps is at or above 10, and make it orange and if it is below 10 it will make the color red:
+```yaml
+  colored_tps2:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} >= 10
+    true: "&6${viewer server_tps_1}"
+    false: "&c${viewer server_tps_1}"
+```
+You'll also need to make sure you have the PlaceholderAPI Server expansion installed, using `/papi ecloud download Server` then reloading PlaceholderAPI with `/papi reload`. 
+
+Now we can use the `colored_tps` placeholder to give TPS different colors:
+```yaml
+- "&cTPS: ${colored_tps}"
+```
+
+Alternatively you could use the `%server_tps_1_colored%` placeholder with the Server expansion like this for a less customizable colored look:
+```yaml
+- "&cTPS: ${viewer server_tps_1_colored}"
+```
+
+[!]: endIF
+
+
+[!]: ifBTLP
 The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
 ```yaml
 customPlaceholders:
