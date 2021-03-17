@@ -748,6 +748,8 @@ To display the ping of the players on the tab list we use `player` as parameter:
 playerComponent: "${player name} ${colored_ping player}"
 ```
 
+[!]: ifBTLP
+
 #### The `${colored_tps}` Placeholder
 
 In this example we look at how we can add a color code to the tps depending on how good it is.
@@ -810,6 +812,8 @@ Now we can use the `colored_tps` placeholder to give TPS different colors:
 - "&cTPS: ${colored_tps (server)}"
 ```
 Keep in mind you will need to define the server you want in the custom placeholder.
+[!]: endIF
+
 
 #### Creating Custom Prefixes - `${custom_prefix}`
 
