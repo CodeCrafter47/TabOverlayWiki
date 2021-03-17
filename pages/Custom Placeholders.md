@@ -322,15 +322,15 @@ The following types of custom placeholders are available:
         
         The following style presets are available:
         
-        | style | preview |
-        | ----- | ------- |
-        | `default` | ![](images/progress_bar_default.png) |
-        | `largediv` | ![](images/progress_bar_largediv.png) |
-        | `tricolor` | ![](images/progress_bar_tricolor.png) |
-        | `default_shaded` | ![](images/progress_bar_default_shaded.png) |
+        | style             | preview                                      |
+        | ----------------- | -------------------------------------------- |
+        | `default`         | ![](images/progress_bar_default.png)         |
+        | `largediv`        | ![](images/progress_bar_largediv.png)        |
+        | `tricolor`        | ![](images/progress_bar_tricolor.png)        |
+        | `default_shaded`  | ![](images/progress_bar_default_shaded.png)  |
         | `largediv_shaded` | ![](images/progress_bar_largediv_shaded.png) |
         | `tricolor_shaded` | ![](images/progress_bar_tricolor_shaded.png) |
-        | `hearts` | ![](images/progress_bar_hearts.png) |
+        | `hearts`          | ![](images/progress_bar_hearts.png)          |
         
         Shaded variants only work for Minecraft 1.16 or later.
     
@@ -675,11 +675,11 @@ You can find the complete configuration file used in this example at <https://gi
 In this example we look at how we can add a color code to the ping depending on how good it is.
 The following table shows the desired color scheme:
 
-| Ping | Color |
-| ---- | ----- |
-| 0 to 49 | Green |
-| 50 to 149 | Yellow |
-| 150 and above | Red |
+| Ping          | Color  |
+| ------------- | ------ |
+| 0 to 49       | Green  |
+| 50 to 149     | Yellow |
+| 150 and above | Red    |
 
 Now we have three cases, but using a single conditional placeholder we can only distinguish two cases.
 We solve this problem by using two conditional placeholders.
@@ -748,23 +748,23 @@ To display the ping of the players on the tab list we use `player` as parameter:
 playerComponent: "${player name} ${colored_ping player}"
 ```
 
-[!]: ifBTLP
-
 #### The `${colored_tps}` Placeholder
 
 In this example we look at how we can add a color code to the tps depending on how good it is.
 The following table shows the desired color scheme:
 
-| TPS | Color |
-| ---- | ----- |
-| Above 20 | Green |
-| 18 to 20 | Green |
+| TPS      | Color  |
+| -------- | ------ |
+| Above 20 | Green  |
+| 18 to 20 | Green  |
 | 15 to 17 | Yellow |
 | 10 to 14 | Orange |
-| 0 to 9 | Red |
+| 0 to 9   | Red    |
 
 We have five cases now, but using a single conditional placeholder we can only distinguish two cases so we must use multiple conditional placeholders.
 We will need four placeholders in total:
+
+[!]: ifBTLP
 
 The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
 ```yaml
@@ -814,6 +814,54 @@ Now we can use the `colored_tps` placeholder to give TPS different colors:
 Keep in mind you will need to define the server you want in the custom placeholder.
 [!]: endIF
 
+[!]: ifATO
+
+The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
+```yaml
+customPlaceholders:
+  colored_tps:
+    !conditional
+    condition: ${viewer server_tps_1} > 20
+    true: "&a*20.00"
+    false: "&e${colored_tps0}"
+```
+
+The second placeholder `colored_tps0` will check to see if the server's tps is at or above 18, and make it green:
+```yaml
+  colored_tps0:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} >= 18
+    true: "&a${viewer server_tps_1}"
+    false: "${colored_tps1}"
+```
+
+The third placeholder `colored_tps1` will check to see if the server's tps is at or above 15, and make it yellow:
+```yaml
+  colored_tps1:
+    !conditional
+    parameters: 1
+    condition: ${viewer server_tps_1} >= 15
+    true: "&e${viewer server_tps_1}"
+    false: "${colored_tps2}"
+```
+
+The fourth and final placeholder `colored_tps2` will check to see if the server's tps is at or above 10, and make it orange and if it is below 10 it will make the color red:
+```yaml
+  colored_tps2:
+    !conditional
+    parameters: 1
+    condition: ${server:%0 tps} >= 10
+    true: "&6${viewer server_tps_1}"
+    false: "&c${viewer server_tps_1}"
+```
+
+Now we can use the `colored_tps` placeholder to give TPS different colors:
+```yaml
+- "&cTPS: ${colored_tps}"
+```
+Note that we use `server_tps_1` which is a PlaceholderAPI placeholder and gives us the TPS of the first minute.
+[!]: endIF
 
 #### Creating Custom Prefixes - `${custom_prefix}`
 
@@ -837,10 +885,10 @@ You can edit everything after `replacements:` to suit your needs.
 
 Then you can use the following placeholders:
 
-| Placeholder                     | Description                                                           |
-| ------------------------------- | --------------------------------------------------------------------- |
-| `${custom_prefix viewer}` | Prefix of the player viewing the tab list.                                  |
-| `${custom_prefix player}` | Prefix of a player listed in the tab list. For use in the `playerComponent` |
+| Placeholder                     | Description                                                                 |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| `${custom_prefix viewer}`       | Prefix of the player viewing the tab list.                                  |
+| `${custom_prefix player}`       | Prefix of a player listed in the tab list. For use in the `playerComponent` |
 
 To display the custom prefix for each player in the tab list add the `${custom_prefix player}` custom placeholder before the name:
 ```yaml
@@ -880,12 +928,12 @@ customPlaceholders:
 
 The above code makes the following new placeholders available for use in your config file:
 
-| Placeholder                     | Description                                 |
-| ------------------------------- | ------------------------------------------- |
-| `${server_display_name viewer server}` | Display name of the server of the player viewing the tab list. |
+| Placeholder                            | Description                                                                                     |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `${server_display_name viewer server}` | Display name of the server of the player viewing the tab list.                                  |
 | `${server_display_name player server}` | Display name of the server of a player listed in the tab list. For use in the `playerComponent` |
-| `${server_display_name server}`        | Display name of the server for use in the `serverHeader` of the _Players by Server_ component. |
-| `${server_display_name server:lobby}`  | Display name of a specific server.               |
+| `${server_display_name server}`        | Display name of the server for use in the `serverHeader` of the _Players by Server_ component.  |
+| `${server_display_name server:lobby}`  | Display name of a specific server.                                                              |
 
 *Note:* If you place the custom placeholder code in `config.yml` then it is available to all tab 
 lists. You can alternatively place it in the config file of a specific tab list. Then it is only
@@ -899,7 +947,7 @@ alias.
 
 Here'a a table of where in the file to look and which placeholders to replace with which:
 
-| Where                                                | Look for         | Replace with                           |
+| Where                                                | Look for           | Replace with                           |
 | ---------------------------------------------------- | ------------------ | -------------------------------------- |
 | `header`, `footer`, custom text in `components`      | `${viewer server}` | `${server_display_name viewer server}` |
 | `serverHeader` in the `!players_by_server` component | `${server}`        | `${server_display_name server}`        |
@@ -932,12 +980,12 @@ customPlaceholders:
 
 Then you can use the following placeholders:
 
-| Placeholder                     | Description                                 |
-| ------------------------------- | ------------------------------------------- |
-| `${server_prefix viewer server}` | Prefix of the server of the player viewing the tab list. |
+| Placeholder                      | Description                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------------- |
+| `${server_prefix viewer server}` | Prefix of the server of the player viewing the tab list.                                  |
 | `${server_prefix player server}` | Prefix of the server of a player listed in the tab list. For use in the `playerComponent` |
-| `${server_prefix server}`        | Prefix of the server for use in the `serverHeader` of the _Players by Server_ component. |
-| `${server_prefix server:lobby}`  | Prefix of a specific server.               |
+| `${server_prefix server}`        | Prefix of the server for use in the `serverHeader` of the _Players by Server_ component.  |
+| `${server_prefix server:lobby}`  | Prefix of a specific server.                                                              |
 
 #### `${animated_bars}`
 
