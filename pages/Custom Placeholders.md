@@ -816,6 +816,11 @@ Keep in mind you will need to define the server you want in the custom placehold
 
 [!]: ifATO
 
+We use the `server_tps_1` placeholder from [[PlaceholderAPI]] which returns the average TPS from the past minute.  
+You can also use `server_tps_1_colored` to get the TPS with color already applied to it. This example here however allows you to define more colors.
+
+Remember to have PlaceholderAPI installed and to have the `Server` Expansion installed (`/papi ecloud download server`) for this custom placeholder to work.
+
 The first placeholder `colored_tps` will check whether the server's tps is above 20, this will stop numbers from going higher and default back to `*20.00`:
 ```yaml
 customPlaceholders:
@@ -860,7 +865,6 @@ Now we can use the `colored_tps` placeholder to give TPS different colors:
 ```yaml
 - "&cTPS: ${colored_tps}"
 ```
-Note that we use `server_tps_1` which is a PlaceholderAPI placeholder and gives us the TPS of the first minute.
 [!]: endIF
 
 #### Creating Custom Prefixes - `${custom_prefix}`
