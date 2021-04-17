@@ -50,7 +50,7 @@ Those placeholders also may only be able to provide values while a player is onl
 #### Essentials
 | Viewer Variant             | Player Variant             |
 | -------------------------- | -------------------------- |
-| `${viewer essentials_afk}` | `${viewer essentials_afk}` |
+| `${viewer essentials_afk}` | `${player essentials_afk}` |
 
 #### Factions
 | Viewer Variant                          | Player Variant                          |
