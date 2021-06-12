@@ -38,7 +38,7 @@ The following components are available:
         | 150 - 299 | four bars            | ![](images/ping_bar_150.png)  |
         | 300 - 599 | three bars           | ![](images/ping_bar_300.png)  |
         | 600 - 999 | two bars             | ![](images/ping_bar_600.png)  |
-        | > 1000    | one bar              | ![](images/ping_bar_1000.png) |
+        | >999      | one bar              | ![](images/ping_bar_1000.png) |
         
    * ##### `left`
    
