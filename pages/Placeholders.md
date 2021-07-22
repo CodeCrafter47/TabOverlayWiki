@@ -47,7 +47,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` |
 [!]: endIF
 
-#### Essentials
+#### [Essentials](https://www.spigotmc.org/resources/9089/)
 | Viewer Variant             | Player Variant             |
 | -------------------------- | -------------------------- |
 | `${viewer essentials_afk}` | `${player essentials_afk}` |
@@ -63,7 +63,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer faction_power}`               | `${player faction_power}`               |
 | `${viewer faction_rank}`                | `${player faction_rank}`                |
 
-#### Multiverse
+#### [Multiverse](https://www.spigotmc.org/resources/390/)
 | Viewer Variant                     | Player Variant                     |
 | ---------------------------------- | ---------------------------------- |
 | `${viewer multiverse_world_alias}` | `${player multiverse_world_alias}` |
@@ -83,7 +83,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer SimpleClans_ClanColorTag}`      | `${player SimpleClans_ClanColorTag}`      |
 | `${viewer SimpleClans_OnlineClanMembers}` | `${player SimpleClans_OnlineClanMembers}` |
 
-#### Vault
+#### [Vault](https://www.spigotmc.org/resources/34315/)
 | Viewer Variant                         | Player Variant                         |
 | -------------------------------------- | -------------------------------------- |
 | `${viewer vault_balance}`              | `${player vault_balance}`              |
@@ -97,7 +97,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer vault_primary_group_prefix}` | `${player vault_primary_group_prefix}` |
 | `${viewer vault_suffix}`               | `${player vault_suffix}`               |
 
-#### ASkyBlock
+#### [ASkyBlock](https://www.spigotmc.org/resources/1220/)
 | Viewer Variant                     | Player Variant                     |
 | ---------------------------------- | ---------------------------------- |
 | `${viewer askyblock_island_level}` | `${player askyblock_island_level}` |
@@ -114,7 +114,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer paf_clans_is_leader}`                | `${player paf_clans_is_leader}`                |
 
 [!]: ifBTLP
-#### LuckPerms
+#### [LuckPerms](https://www.spigotmc.org/resources/28140/)
 | Viewer Variant                                   | Player Variant                                   |
 | ------------------------------------------------ | ------------------------------------------------ |
 | `${viewer luckpermsbungee_prefix}`               | `${player luckpermsbungee_prefix}`               |
@@ -122,7 +122,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer luckpermsbungee_primary_group}`        | `${player luckpermsbungee_primary_group}`        |
 | `${viewer luckpermsbungee_primary_group_weight}` | `${player luckpermsbungee_primary_group_weight}` |
 
-#### BungeePerms
+#### [BungeePerms](https://www.spigotmc.org/resources/25/)
 | Viewer Variant                               | Player Variant                               |
 | -------------------------------------------- | --------------------                         |
 | `${viewer bungeeperms_display}`              | `${player bungeeperms_display}`              |
@@ -134,8 +134,8 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer bungeeperms_suffix}`               | `${player bungeeperms_suffix}`               |
 | `${viewer bungeeperms_user_prefix}`          | `${player bungeeperms_user_prefix}`          |
 
-#### BungeeOnlineTime
-| Viewer Variant | Player Variant
+#### [BungeeOnlineTime](https://www.spigotmc.org/resources/795/)
+| Viewer Variant                           | Player Variant                           |
 | ---------------------------------------- | ---------------------------------------- |
 | `${viewer bungeeonlinetime_days}`        | `${player bungeeonlinetime_days}`        |
 | `${viewer bungeeonlinetime_hours_of_24}` | `${player bungeeonlinetime_hours_of_24}` |
@@ -143,12 +143,12 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer bungeeonlinetime_minutes}`     | `${player bungeeonlinetime_minutes}`     |
 | `${viewer bungeeonlinetime_seconds}`     | `${player bungeeonlinetime_seconds}`     |
 
-#### RedisBungee
+#### [RedisBungee](https://www.spigotmc.org/resources/13494/)
 | Viewer Variant                    | Player Variant                    |
 | --------------------------------- | --------------------------------- |
 | `${viewer redisbungee_server_id}` | `${player redisbungee_server_id}` |
 
-#### Nucleus
+#### [Nucleus](https://ore.spongepowered.org/Nucleus/Nucleus/pages/Home)
 | Viewer Variant           | Player Variant           |
 | ------------------------ | ------------------------ |
 | `${viewer nucleus_afk}`  | `${player nucleus_afk}`  |
@@ -182,7 +182,7 @@ want to use it as condition in the _conditional component_.
 
  * #### `${time <format>}`
  
-   Displays the current time. Example: `${time HH:mm:ss}`. You can find more information about the date format at <https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html>.
+   Displays the current time. Example: `${time HH:mm:ss}`. You can find more information about the date format at https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html.
    
    _Examples:_
    
