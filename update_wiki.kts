@@ -192,6 +192,7 @@ fun extractLabel(substring: String): String {
             .replace(".", "")
             .replace(",", "")
             .replace("?", "")
+            .replace("\\(.\\)".toRegex(), "")
             .trim()
             .replace(" ", "-")
             .toLowerCase()
