@@ -9,6 +9,8 @@
   - Travertine or a similar BungeeCord fork.
   - ViaVersion with ViaBackwards and ViaRewind (on BungeeCord).
   - ProtocolSupportBungee.
+  
+  Please be aware of [[possible downsides|FAQ#i-get-size-80-defined-in-defaultyml-is-not-supported-by-client]] when using Clients with versions older than 1.8
 
 * Java 8
 
