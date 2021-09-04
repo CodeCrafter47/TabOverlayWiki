@@ -6,7 +6,7 @@
 ### Maven Repository
 
 To get easy access to the required dependencies you should add my maven repository to your project.
-```
+```xml
 <repository>
     <id>codecrafter47-repo</id>
     <url>http://nexus.codecrafter47.de/content/repositories/public/</url>
@@ -26,16 +26,16 @@ To get easy access to the required dependencies you should add my maven reposito
 If BungeeTabListPlus_BukkitBridge.jar is installed on the Bukkit server it provides an API allowing developers register custom variables.
 
 1.  Add this to plugin.yml:
-    ```
+    ```yaml
     depend: ['BungeeTabListPlus']
     ```
     or if you want your plugin to be able to run without BungeeTabListPlus being installed add this:
-    ```
+    ```yaml
     softdepend: ['BungeeTabListPlus']
     ```
 
 2.  Add a dependency to the BungeeTabListPlus API to your maven project.
-    ```
+    ```xml
     <dependency>
         <groupId>codecrafter47.bungeetablistplus</groupId>
         <artifactId>bungeetablistplus-api-bukkit</artifactId>
@@ -45,7 +45,7 @@ If BungeeTabListPlus_BukkitBridge.jar is installed on the Bukkit server it provi
     ```
 
 3.  Create a class for your custom variable
-    ```
+    ```java
     import codecrafter47.bungeetablistplus.api.bukkit.Variable;
 
     public class TestVariable extends Variable {
@@ -63,7 +63,7 @@ If BungeeTabListPlus_BukkitBridge.jar is installed on the Bukkit server it provi
     ```
 
 4.  Register your variable in onEnable
-    ```
+    ```java
     BungeeTabListPlusBukkitAPI.registerVariable(this, new TestVariable());
     ```
 
@@ -78,16 +78,16 @@ The plugin provides an extensive API on BungeeCord allowing third party plugins 
 #### Add the BungeeTabListPlus API dependency to your project
 
 Add this to bungee.yml (or plugin.yml):
-```
+```yaml
 depends: ['BungeeTabListPlus']
 ```
 or if you only want to hook BungeeTabListPlus optionally use:
-```
+```yaml
 softDepends: ['BungeeTabListPlus']
 ```
 
 Add a dependency to the BungeeTabListPlus API to your maven project.
-```
+```xml
 <dependency>
     <groupId>codecrafter47.bungeetablistplus</groupId>
     <artifactId>bungeetablistplus-api-bungee</artifactId>
@@ -231,23 +231,23 @@ public class DemoPlugin extends Plugin {
 #### Controlling fake players
 
 Get the FakePlayerManager:
-```
+```java
 FakePlayerManager fakePlayerManager = BungeeTabListPlusAPI.getFakePlayerManager();
 ```
 
 Enable disable fake players from the config randomly joining the game:
-```
+```java
 fakePlayerManager.setRandomJoinLeaveEnabled(true);
 fakePlayerManager.setRandomJoinLeaveEnabled(false);
 ```
 
 Get all fake players which are displayed in the tab list:
-```
+```java
 Collection<FakePlayer> onlineFakePlayers = fakePlayerManager.getOnlineFakePlayers();
 ```
 
 Add a fake player to the tab list:
-```
+```java
 ServerInfo server = ...;
 FakePlayer fakePlayer = fakePlayerManager.createFakePlayer("Name", server);
 
@@ -266,16 +266,16 @@ fakePlayerManager.removeFakePlayer(fakePlayer);
 If BungeeTabListPlus_SpongeBridge.jar is installed on your Sponge server it provides an API allowing developers register custom placeholders.
 
 1.  Add the BungeeTabListPlus dependency to your @Plugin annotation:
-    ```
+    ```java
     @Plugin(id = "your_id", name = "your_name", version = "your_version", dependencies = {@Dependency(id = "bungeetablistplus")})
     ```
     or if you want your plugin to be able to run without BungeeTabListPlus being installed:
-    ```
+    ```java
     @Plugin(id = "your_id", name = "your_name", version = "your_version", dependencies = {@Dependency(id = "bungeetablistplus", optional = true)})
     ```
 
 2.  Add a dependency to the BungeeTabListPlus API to your maven project.
-    ```
+    ```xml
     <dependency>
         <groupId>codecrafter47.bungeetablistplus</groupId>
         <artifactId>bungeetablistplus-sponge-bukkit</artifactId>
@@ -285,7 +285,7 @@ If BungeeTabListPlus_SpongeBridge.jar is installed on your Sponge server it prov
     ```
 
 3.  Create a class for your custom variable
-    ```
+    ```java
     import codecrafter47.bungeetablistplus.api.sponge.Variable;
 
     public class TestVariable extends Variable {
@@ -303,7 +303,7 @@ If BungeeTabListPlus_SpongeBridge.jar is installed on your Sponge server it prov
     ```
 
 4.  Register your placeholder. You should do this during the POST_INITIALIZATION phase or later.
-    ```
+    ```java
     BungeeTabListPlusSpongeAPI.registerVariable(this, new TestVariable());
     ```
 
