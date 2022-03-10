@@ -14,6 +14,11 @@ You have to replace `#RRGGBB` with a color in hexadecimal notation, e.g. `#01234
 
 ![](images/rgb-colors.png)
 
+#### Color gradient
+
+You can use the `!color_animation` component to create a custom placeholder that turns any text into the specified gradient.  
+The component is explained in detail on the [[Custom Placeholders page|Custom Placeholders#color_animation]].
+
 ### Fonts
 
 **Note:** This feature is only available on 1.16 or later. If there are older clients connected to the server this won't work.
