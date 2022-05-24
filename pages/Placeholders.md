@@ -9,11 +9,16 @@ In addition to the built-in placeholders presented below you can use placeholder
 To learn how to use placeholder from PlaceholderAPI have a look at the [PlaceholderAPI](PlaceholderAPI) page.
 
 [!]: ifBTLP
-Note that some of the placeholders below may need the BungeeTabListPlus_BukkitBridge plugin to be installed on your Spigot Servers.  
-Those placeholders also may only be able to provide values while a player is online on that specific server.
+Please be aware of the following requirements and limitations about placeholders:
+
+- Any placeholder from PlaceholderAPI require the `BungeeTabListPlus_BukkitBridge` plugin to be installed on your Spigot Servers.
+- Some inbuilt placeholders require the `BungeeTabListPlus_BukkitBridge` plugin to be installed on your Spigot Servers.
+- [Nucleus](#nucleus) placeholders require the `BungeeTabListPlus_SpongeBridge` plugin to be installed on your Sponge Servers.
+- Any placeholder requiring a Bridge plugin also requires at least one player to be present on that server to function (BungeeCord limitation).
 [!]: endIF
 
 #### Generic player placeholders
+
 | Viewer Variant                             | Player Variant                             |
 | ------------------------------------------ | ------------------------------------------ |
 | `${viewer display_name}`                   | `${player display_name}`                   |
@@ -47,12 +52,15 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` |
 [!]: endIF
 
-#### [Essentials](https://www.spigotmc.org/resources/9089/)
+#### Essentials
+[Spigot Page](https://www.spigotmc.org/resources/9089/)
+
 | Viewer Variant             | Player Variant             |
 | -------------------------- | -------------------------- |
 | `${viewer essentials_afk}` | `${player essentials_afk}` |
 
 #### Factions
+
 | Viewer Variant                          | Player Variant                          |
 | --------------------------------------- | --------------------------------------- |
 | `${viewer faction_at_current_location}` | `${player faction_at_current_location}` |
@@ -63,17 +71,21 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer faction_power}`               | `${player faction_power}`               |
 | `${viewer faction_rank}`                | `${player faction_rank}`                |
 
-#### [Multiverse](https://www.spigotmc.org/resources/390/)
+#### Multiverse
+[Spigot Page](https://www.spigotmc.org/resources/390)
+
 | Viewer Variant                     | Player Variant                     |
 | ---------------------------------- | ---------------------------------- |
 | `${viewer multiverse_world_alias}` | `${player multiverse_world_alias}` |
 
 #### PlayerPoints
+
 | Viewer Variant            | Player Variant            |
 | ------------------------- | ------------------------- |
 | `${viewer player_points}` | `${player player_points}` |
 
 #### SimpleClans
+
 | Viewer Variant                            | Player Variant                            |
 | ----------------------------------------- | ----------------------------------------- |
 | `${viewer SimpleClans_ClanName}`          | `${player SimpleClans_ClanName}`          |
@@ -83,7 +95,9 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer SimpleClans_ClanColorTag}`      | `${player SimpleClans_ClanColorTag}`      |
 | `${viewer SimpleClans_OnlineClanMembers}` | `${player SimpleClans_OnlineClanMembers}` |
 
-#### [Vault](https://www.spigotmc.org/resources/34315/)
+#### Vault
+[Spigot Page](https://www.spigotmc.org/resources/34315)
+
 | Viewer Variant                         | Player Variant                         |
 | -------------------------------------- | -------------------------------------- |
 | `${viewer vault_balance}`              | `${player vault_balance}`              |
@@ -97,7 +111,9 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer vault_primary_group_prefix}` | `${player vault_primary_group_prefix}` |
 | `${viewer vault_suffix}`               | `${player vault_suffix}`               |
 
-#### [ASkyBlock](https://www.spigotmc.org/resources/1220/)
+#### ASkyBlock
+[Spigot Page](https://www.spigotmc.org/resources/1220)
+
 | Viewer Variant                     | Player Variant                     |
 | ---------------------------------- | ---------------------------------- |
 | `${viewer askyblock_island_level}` | `${player askyblock_island_level}` |
@@ -105,6 +121,7 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer askyblock_team_leader}`  | `${player askyblock_team_leader}`  |
 
 #### PartyAndFriends Clans
+
 | Viewer Variant                                 | Player Variant                                 |
 | ---------------------------------------------- | ---------------------------------------------- |
 | `${viewer paf_clans_clan_name}`                | `${player paf_clans_clan_name}`                |
@@ -114,7 +131,9 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer paf_clans_is_leader}`                | `${player paf_clans_is_leader}`                |
 
 [!]: ifBTLP
-#### [LuckPerms](https://www.spigotmc.org/resources/28140/)
+#### LuckPerms
+[Spigot Page](https://www.spigotmc.org/resources/28140)
+
 | Viewer Variant                                   | Player Variant                                   |
 | ------------------------------------------------ | ------------------------------------------------ |
 | `${viewer luckpermsbungee_prefix}`               | `${player luckpermsbungee_prefix}`               |
@@ -122,7 +141,9 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer luckpermsbungee_primary_group}`        | `${player luckpermsbungee_primary_group}`        |
 | `${viewer luckpermsbungee_primary_group_weight}` | `${player luckpermsbungee_primary_group_weight}` |
 
-#### [BungeePerms](https://www.spigotmc.org/resources/25/)
+#### BungeePerms
+[Spigot Page](https://www.spigotmc.org/resources/25)
+
 | Viewer Variant                               | Player Variant                               |
 | -------------------------------------------- | --------------------                         |
 | `${viewer bungeeperms_display}`              | `${player bungeeperms_display}`              |
@@ -134,7 +155,9 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer bungeeperms_suffix}`               | `${player bungeeperms_suffix}`               |
 | `${viewer bungeeperms_user_prefix}`          | `${player bungeeperms_user_prefix}`          |
 
-#### [BungeeOnlineTime](https://www.spigotmc.org/resources/795/)
+#### BungeeOnlineTime
+[Spigot Page](https://www.spigotmc.org/resources/795)
+
 | Viewer Variant                           | Player Variant                           |
 | ---------------------------------------- | ---------------------------------------- |
 | `${viewer bungeeonlinetime_days}`        | `${player bungeeonlinetime_days}`        |
@@ -143,12 +166,16 @@ Those placeholders also may only be able to provide values while a player is onl
 | `${viewer bungeeonlinetime_minutes}`     | `${player bungeeonlinetime_minutes}`     |
 | `${viewer bungeeonlinetime_seconds}`     | `${player bungeeonlinetime_seconds}`     |
 
-#### [RedisBungee](https://www.spigotmc.org/resources/13494/)
+#### RedisBungee
+[Spigot Page](https://www.spigotmc.org/resources/13494)
+
 | Viewer Variant                    | Player Variant                    |
 | --------------------------------- | --------------------------------- |
 | `${viewer redisbungee_server_id}` | `${player redisbungee_server_id}` |
 
-#### [Nucleus](https://ore.spongepowered.org/Nucleus/Nucleus/pages/Home)
+#### Nucleus
+[Sponge Page](https://ore.spongepowered.org/Nucleus/Nucleus/pages/Home)
+
 | Viewer Variant           | Player Variant           |
 | ------------------------ | ------------------------ |
 | `${viewer nucleus_afk}`  | `${player nucleus_afk}`  |
