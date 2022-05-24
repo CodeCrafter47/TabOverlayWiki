@@ -15,7 +15,7 @@ jobs:
           install-native: false
       - run: kotlin update_wiki.kts
       - name: Push ATO Wiki Changes
-        uses: Andrew-Chen-Wang/github-wiki-action@v2
+        uses: Andrew-Chen-Wang/github-wiki-action@v3
         env:
           WIKI_DIR: AdvancedTabOverlay.wiki/
           GH_TOKEN: ${{ secrets.PAT }}
