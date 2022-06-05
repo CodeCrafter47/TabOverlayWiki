@@ -248,12 +248,32 @@ The following types of custom placeholders are available:
 
 6. #### `!color_animation`
 
-    The `!color_animation` custom placeholder allows creating color gradients and rainbow-like animations in a simple way.
+    The `!color_animation` custom placeholder allows creating color gradients, rainbow-like animations and other effects in a simple way.
     It has the following options:
-    
+
+    * ##### `effect`
+
+        Can be one of `rainbow`, `uniformRainbow`, `random`, `wave`, `waveCenter` or `glitter`.
+
     * ##### `colors`
     
         The `colors` is a list of colors used in the animation. A color can be a legacy color code such as `&a` or an rgb color such as `#012345`.
+
+        Needs to be specified for `rainbow`, `uniformRainbow`, `random`, but not the other effects.
+   
+    * ##### `baseColor`
+
+        Base color used for the animation.
+        A color can be a legacy color code such as `&a` or an rgb color such as `#012345`.
+
+        Needs to be specified for `wave`, `waveCenter` and `glitter`, but not the others.
+
+   * ##### `effectColor`
+
+     Highlight color used for the animation.
+     A color can be a legacy color code such as `&a` or an rgb color such as `#012345`.
+
+     Needs to be specified for `wave`, `waveCenter` and `glitter`, but not the others.
     
     * ##### `distance`
     
@@ -261,7 +281,7 @@ The following types of custom placeholders are available:
         
     * ##### `speed`
     
-        Determines how fast the colors move through the text. Can be negative to inverse the direction.
+        Determines how fast the colors move through the text. Can be zero or negative to inverse the direction.
         
     _Schema:_
     ```yaml

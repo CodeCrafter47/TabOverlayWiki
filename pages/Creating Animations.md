@@ -5,6 +5,51 @@ While the custom placeholder can only create animated text, using the `!animated
 ### Content
 [!]: ToC
 
+### The `!color_animation` Custom Placeholder
+
+The `!color_animation` Custom Placeholder offers an easy way to create a set a predefined effects. It is easier to show than tell, so here is a sample of the different effects that can be created.
+
+![](images/color_animation_example.gif)
+
+The following config has been used to create those effects.
+You can use it as a starting point for your own, customizing colors and such.
+
+```yaml
+customPlaceholders:
+  demo_random:
+    !color_animation
+    effect: "random"
+    colors: ['&8', '&7', '&7']
+  demo_wave:
+    !color_animation
+    effect: wave
+    baseColor: "&c"
+    effectColor: "&e"
+    speed: 4
+  demo_wave_backwards:
+    !color_animation
+    effect: wave
+    baseColor: "&c"
+    effectColor: "&e"
+    speed: -4
+  demo_wave_center:
+    !color_animation
+    effect: waveCenter
+    baseColor: "&5"
+    effectColor: "&d"
+  demo_glitter:
+    !color_animation
+    effect: glitter
+    baseColor: "&6"
+    effectColor: "&f"
+components:
+- ${demo_wave Amazing}
+- ${demo_wave_backwards Colorful}
+- ${demo_wave_center Beautiful}
+- ${demo_glitter Glamorous}
+- ${demo_random Nothing to see}
+```
+
 ### The `!animated` Custom Placeholder
 
 It is possible to do animations using the `!animated` custom placeholder. The following example creates a `${animated_bars}` placeholder that can be used anywhere on the tab list.
