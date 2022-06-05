@@ -509,6 +509,17 @@ The following types of custom placeholders are available:
     
     The major difference is that instead of having a `expression` followed by a list of `replacements` do you have the expressions directly within the `replacements` map.
     
+    _Example:_
+    ```yaml
+    customPlaceholders:
+      color_prefix:
+        !select
+        replacements:
+          ${player permission color.red}: "&c"
+          ${player permission color.green}: "&a"
+        defaultReplacement: "&f"
+    ```
+    
     * ##### `replacements`
         
         The `replacements` options defines a map of different replacements for the `!select` custom placeholder.
