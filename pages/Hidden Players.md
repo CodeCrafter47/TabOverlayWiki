@@ -108,6 +108,11 @@ playerSets:
     hiddenPlayers: VISIBLE
 ```
 
+### For Developers: Add support for your plugin
+
+If you have your own Vanish plugin and would like to have !!name support it can it be done easily through the Bukkit API and doesn't require any interaction with the API of the plugin.  
+To add support, simply add a `vanished` metadata object with value `true` to the Player itself. !!name should then automatically pick up this information and hide the player from the tab list.
+
 [!]: ifBTLP
 ### Troubleshooting
 
