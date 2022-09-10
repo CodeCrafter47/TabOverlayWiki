@@ -13,14 +13,16 @@ It is possible to configure whether vanished players will show up on the tab lis
 For this to work you must be using one of the following vanish plugins:
 
 [!]: ifBTLP
-* Essentials
+* Essentials*
 * SuperVanish/ PremiumVanish
-* CMI
+* CMI*
 * VanishNoPacket
 * ProxySuite
 * ProtocolVanish
 * StaffFacilities
-* Nucleus
+* Nucleus*
+
+\*Requires you to install the BungeeTabListPlus_BukkitBridge plugin on the Spigot Servers to work.
 
 [!]: endIf
 [!]: ifATO
