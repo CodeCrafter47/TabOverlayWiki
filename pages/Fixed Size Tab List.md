@@ -68,6 +68,10 @@ First we have a look at the options available specifically for the `FIXED_SIZE` 
     | 600 - 999 | two bars             | ![](images/ping_bar_600.png)  |
     | > 1000    | one bar              | ![](images/ping_bar_1000.png) |
     
+* ##### `defaultText`
+  
+    The `defaultText` configures the text for all slots which are neither player slots nor explicitly configured to use a different text.
+    
 * ##### `components`
     
     The `components` option is used to configure the content of the tab list.
