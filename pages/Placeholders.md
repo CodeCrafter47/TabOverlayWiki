@@ -35,6 +35,10 @@ Please be aware of the following requirements and limitations about placeholders
 | `${viewer ping}`                           | `${player ping}`                           |
 | `${viewer tab_name}`                       | `${player tab_name}`                       |
 | `${viewer team}`                           | `${player team}`                           |
+| `${viewer team_color}`                     | `${player team_color}`                     |
+| `${viewer team_display_name}`              | `${player team_display_name}`              |
+| `${viewer team_prefix}`                    | `${player team_prefix}`                    |
+| `${viewer team_suffix}`                    | `${player team_suffix}`                    |
 | `${viewer total_xp}`                       | `${player total_xp}`                       |
 | `${viewer uuid}`                           | `${player uuid}`                           |
 | `${viewer world}`                          | `${player world}`                          |
