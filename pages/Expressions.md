@@ -47,24 +47,26 @@ ${viewer server tps}
 
 `<Expression> <Binary Operator> <Expression>` is a valid expression. The following binary operators are available:
 
-| Operator             | Semantic                                                                                |
-| -------------------- | --------------------------------------------------------------------------------------- |
-| `and`                | Evaluates to `true` only if both operands evaluate to `true`.                           |
-| `or`                 | Evaluates to `true` if at least one of the operands evaluate to `true`.                 |
-| `==`                 | Tests the operands for equality.                                                        |
-| `!=`                 | `true` if the operands are not equal, false otherwise.                                  |
-| <code>&#124;-</code> | Compares two Strings, true if the first operand is starting with the second operand.    |
-| <code>-&#124;</code> | Compares two Strings, true if the first operand is ending with the second operand.      |
-| `<_`                 | Compares two Strings, true if the first operand is containing the second operand.       |
-| `<`                  | Compares two numbers, true if the first operand is smaller than the second operand.     |
-| `<=`                 | Compares two numbers, true if the first operand is smaller or equal the second operand. |
-| `>`                  | Compares two numbers, true if the first operand is greater than the second operand.     |
-| `>=`                 | Compares two numbers, true if the first operand is greater or equal the second operand. |
-| `.`                  | Concatenates two strings.                                                               |
-| `+`                  | Adds two numbers.                                                                       |
-| `-`                  | Subtracts one number from another.                                                      |
-| `*`                  | Multiplies two numbers.                                                                 |
-| `/`                  | Divides one number by another.                                                          |
+| Operator | Semantic                                                                                |
+| -------- | --------------------------------------------------------------------------------------- |
+| `and`    | Evaluates to `true` only if both operands evaluate to `true`.                           |
+| `or`     | Evaluates to `true` if at least one of the operands evaluate to `true`.                 |
+| `==`     | Tests the operands for equality.                                                        |
+| `=~`     | Tests the operands for equality while ignoring case.                                    |
+| `!=`     | `true` if the operands are not equal, false otherwise.                                  |
+| `!~`     | `true` if the operands are not equal, false otherwise. Ignores case.                    |
+| `\|-`    | Compares two Strings, true if the first operand is starting with the second operand.    |
+| `-\|`    | Compares two Strings, true if the first operand is ending with the second operand.      |
+| `<_`     | Compares two Strings, true if the first operand is containing the second operand.       |
+| `<`      | Compares two numbers, true if the first operand is smaller than the second operand.     |
+| `<=`     | Compares two numbers, true if the first operand is smaller or equal the second operand. |
+| `>`      | Compares two numbers, true if the first operand is greater than the second operand.     |
+| `>=`     | Compares two numbers, true if the first operand is greater or equal the second operand. |
+| `.`      | Concatenates two strings.                                                               |
+| `+`      | Adds two numbers.                                                                       |
+| `-`      | Subtracts one number from another.                                                      |
+| `*`      | Multiplies two numbers.                                                                 |
+| `/`      | Divides one number by another.                                                          |
 
 Examples:
 ```
