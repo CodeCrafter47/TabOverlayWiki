@@ -19,171 +19,171 @@ Please be aware of the following requirements and limitations about placeholders
 
 #### Generic player placeholders
 
-| Viewer Variant                             | Player Variant                             |
-| ------------------------------------------ | ------------------------------------------ |
-| `${viewer display_name}`                   | `${player display_name}`                   |
-| `${viewer gamemode}`                       | `${player gamemode}`                       |
-| `${viewer health}`                         | `${player health}`                         |
-| `${viewer is_hidden}`                      | `${player is_hidden}`                      |
-| `${viewer level}`                          | `${player level}`                          |
-| `${viewer location_x}`                     | `${player location_x}`                     |
-| `${viewer location_y}`                     | `${player location_y}`                     |
-| `${viewer location_z}`                     | `${player location_z}`                     |
-| `${viewer max_health}`                     | `${player max_health}`                     |
-| `${viewer name}`                           | `${player name}`                           |
-| `${viewer permission <permission>}`        | `${player permission <permission>}`        |
-| `${viewer ping}`                           | `${player ping}`                           |
-| `${viewer tab_name}`                       | `${player tab_name}`                       |
-| `${viewer team}`                           | `${player team}`                           |
-| `${viewer team_color}`                     | `${player team_color}`                     |
-| `${viewer team_display_name}`              | `${player team_display_name}`              |
-| `${viewer team_prefix}`                    | `${player team_prefix}`                    |
-| `${viewer team_suffix}`                    | `${player team_suffix}`                    |
-| `${viewer total_xp}`                       | `${player total_xp}`                       |
-| `${viewer uuid}`                           | `${player uuid}`                           |
-| `${viewer world}`                          | `${player world}`                          |
-| `${viewer xp}`                             | `${player xp}`                             |
+| Viewer Variant                             | Player Variant                             | Example Output                         |
+| ------------------------------------------ | ------------------------------------------ | -------------------------------------- |
+| `${viewer display_name}`                   | `${player display_name}`                   | `§aCodeCrafter§b47`                    |
+| `${viewer gamemode}`                       | `${player gamemode}`                       | `0`                                    |
+| `${viewer health}`                         | `${player health}`                         | `20.0`                                 |
+| `${viewer is_hidden}`                      | `${player is_hidden}`                      | `false`                                |
+| `${viewer level}`                          | `${player level}`                          | `1`                                    |
+| `${viewer location_x}`                     | `${player location_x}`                     | `0.0`                                  |
+| `${viewer location_y}`                     | `${player location_y}`                     | `0.0`                                  |
+| `${viewer location_z}`                     | `${player location_z}`                     | `0.0`                                  |
+| `${viewer max_health}`                     | `${player max_health}`                     | `20.0`                                 |
+| `${viewer name}`                           | `${player name}`                           | `CodeCrafter47`                        |
+| `${viewer permission <permission>}`        | `${player permission <permission>}`        | `false`                                |
+| `${viewer ping}`                           | `${player ping}`                           | `0`                                    |
+| `${viewer tab_name}`                       | `${player tab_name}`                       | `CodeCrafter47`                        |
+| `${viewer team}`                           | `${player team}`                           | `team`                                 |
+| `${viewer team_color}`                     | `${player team_color}`                     | `§1`                                   |
+| `${viewer team_display_name}`              | `${player team_display_name}`              | `§1Team`                               |
+| `${viewer team_prefix}`                    | `${player team_prefix}`                    | `§1[Team]`                             |
+| `${viewer team_suffix}`                    | `${player team_suffix}`                    | `§1[Team]`                             |
+| `${viewer total_xp}`                       | `${player total_xp}`                       | `100`                                  |
+| `${viewer uuid}`                           | `${player uuid}`                           | `d9935dff-9702-404b-9d44-8efd35b0928d` |
+| `${viewer world}`                          | `${player world}`                          | `world`                                |
+| `${viewer xp}`                             | `${player xp}`                             | `100`                                  |
 [!]: ifBTLP
-| `${viewer bungeecord_display_name}`        | `${player bungeecord_display_name}`        |
-| `${viewer bungeecord_primary_group}`       | `${player bungeecord_primary_group}`       |
-| `${viewer client_version}`                 | `${player client_version}`                 |
-| `${viewer client_version_below_1_8}`       | `${player client_version_below_1_8}`       |
-| `${viewer client_version_atleast_1_8}`     | `${player client_version_atleast_1_8}`     |
-| `${viewer server}`                         | `${player server}`                         |
-| `${viewer session_duration_hours}`         | `${viewer session_duration_hours}`         |
-| `${viewer session_duration_minutes}`       | `${viewer session_duration_minutes}`       |
-| `${viewer session_duration_seconds}`       | `${viewer session_duration_seconds}`       |
-| `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` |
+| `${viewer bungeecord_display_name}`        | `${player bungeecord_display_name}`        | `§aCodeCrafter47`                      |
+| `${viewer bungeecord_primary_group}`       | `${player bungeecord_primary_group}`       | `owner`                                |
+| `${viewer client_version}`                 | `${player client_version}`                 | `1.20.4`                               |
+| `${viewer client_version_below_1_8}`       | `${player client_version_below_1_8}`       | `false`                                |
+| `${viewer client_version_atleast_1_8}`     | `${player client_version_atleast_1_8}`     | `true`                                 |
+| `${viewer server}`                         | `${player server}`                         | `lobby-1`                              |
+| `${viewer session_duration_hours}`         | `${viewer session_duration_hours}`         | `1`                                    |
+| `${viewer session_duration_minutes}`       | `${viewer session_duration_minutes}`       | `59`                                   |
+| `${viewer session_duration_seconds}`       | `${viewer session_duration_seconds}`       | `59`                                   |
+| `${viewer session_duration_total_seconds}` | `${viewer session_duration_total_seconds}` | `3600`                                 |
 [!]: endIF
 
 #### Essentials
 [Spigot Page](https://www.spigotmc.org/resources/9089/)
 
-| Viewer Variant             | Player Variant             |
-| -------------------------- | -------------------------- |
-| `${viewer essentials_afk}` | `${player essentials_afk}` |
+| Viewer Variant             | Player Variant             | Example Output |
+| -------------------------- | -------------------------- | -------------- |
+| `${viewer essentials_afk}` | `${player essentials_afk}` | `true`         |
 
 #### Factions
 
-| Viewer Variant                          | Player Variant                          |
-| --------------------------------------- | --------------------------------------- |
-| `${viewer faction_at_current_location}` | `${player faction_at_current_location}` |
-| `${viewer faction_member_count}`        | `${player faction_member_count}`        |
-| `${viewer faction_name}`                | `${player faction_name}`                |
-| `${viewer faction_online_member_count}` | `${player faction_online_member_count}` |
-| `${viewer faction_player_power}`        | `${player faction_player_power}`        |
-| `${viewer faction_power}`               | `${player faction_power}`               |
-| `${viewer faction_rank}`                | `${player faction_rank}`                |
+| Viewer Variant                          | Player Variant                          | Example Output |
+| --------------------------------------- | --------------------------------------- | -------------- |
+| `${viewer faction_at_current_location}` | `${player faction_at_current_location}` | `faction`      |
+| `${viewer faction_member_count}`        | `${player faction_member_count}`        | `10`           |
+| `${viewer faction_name}`                | `${player faction_name}`                | `faction`      |
+| `${viewer faction_online_member_count}` | `${player faction_online_member_count}` | `10`           |
+| `${viewer faction_player_power}`        | `${player faction_player_power}`        | `1`            |
+| `${viewer faction_power}`               | `${player faction_power}`               | `1`            |
+| `${viewer faction_rank}`                | `${player faction_rank}`                | `owner`        |
 
 #### Multiverse
 [Spigot Page](https://www.spigotmc.org/resources/390)
 
-| Viewer Variant                     | Player Variant                     |
-| ---------------------------------- | ---------------------------------- |
-| `${viewer multiverse_world_alias}` | `${player multiverse_world_alias}` |
+| Viewer Variant                     | Player Variant                     | Example Output |
+| ---------------------------------- | ---------------------------------- | -------------- |
+| `${viewer multiverse_world_alias}` | `${player multiverse_world_alias}` | `World`        |
 
 #### PlayerPoints
 
-| Viewer Variant            | Player Variant            |
-| ------------------------- | ------------------------- |
-| `${viewer player_points}` | `${player player_points}` |
+| Viewer Variant            | Player Variant            | Example Output |
+| ------------------------- | ------------------------- | -------------- |
+| `${viewer player_points}` | `${player player_points}` | `10`           |
 
 #### SimpleClans
 
-| Viewer Variant                            | Player Variant                            |
-| ----------------------------------------- | ----------------------------------------- |
-| `${viewer SimpleClans_ClanName}`          | `${player SimpleClans_ClanName}`          |
-| `${viewer SimpleClans_ClanMembers}`       | `${player SimpleClans_ClanMembers}`       |
-| `${viewer SimpleClans_ClanTag}`           | `${player SimpleClans_ClanTag}`           |
-| `${viewer SimpleClans_ClanTagLabel}`      | `${player SimpleClans_ClanTagLabel}`      |
-| `${viewer SimpleClans_ClanColorTag}`      | `${player SimpleClans_ClanColorTag}`      |
-| `${viewer SimpleClans_OnlineClanMembers}` | `${player SimpleClans_OnlineClanMembers}` |
+| Viewer Variant                            | Player Variant                            | Example Output |
+| ----------------------------------------- | ----------------------------------------- | -------------- |
+| `${viewer SimpleClans_ClanName}`          | `${player SimpleClans_ClanName}`          | `clan`         |
+| `${viewer SimpleClans_ClanMembers}`       | `${player SimpleClans_ClanMembers}`       | `10`           |
+| `${viewer SimpleClans_ClanTag}`           | `${player SimpleClans_ClanTag}`           | `clan`         |
+| `${viewer SimpleClans_ClanTagLabel}`      | `${player SimpleClans_ClanTagLabel}`      | `§aclan`       |
+| `${viewer SimpleClans_ClanColorTag}`      | `${player SimpleClans_ClanColorTag}`      | `§a`           |
+| `${viewer SimpleClans_OnlineClanMembers}` | `${player SimpleClans_OnlineClanMembers}` | `10`           |
 
 #### Vault
 [Spigot Page](https://www.spigotmc.org/resources/34315)
 
-| Viewer Variant                         | Player Variant                         |
-| -------------------------------------- | -------------------------------------- |
-| `${viewer vault_balance}`              | `${player vault_balance}`              |
-| `${viewer vault_balance2}`             | `${player vault_balance2}`             |
-| `${viewer vault_currency}`             | `${player vault_currency}`             |
-| `${viewer vault_currency_plural}`      | `${player vault_currency_plural}`      |
-| `${viewer vault_primary_group}`        | `${player vault_primary_group}`        |
-| `${viewer vault_primary_group_weight}` | `${player vault_primary_group_weight}` |
-| `${viewer vault_player_prefix}`        | `${player vault_player_prefix}`        |
-| `${viewer vault_prefix}`               | `${player vault_prefix}`               |
-| `${viewer vault_primary_group_prefix}` | `${player vault_primary_group_prefix}` |
-| `${viewer vault_suffix}`               | `${player vault_suffix}`               |
+| Viewer Variant                         | Player Variant                         | Example Output |
+| -------------------------------------- | -------------------------------------- | -------------- |
+| `${viewer vault_balance}`              | `${player vault_balance}`              | `100.0`        |
+| `${viewer vault_balance2}`             | `${player vault_balance2}`             | `100.0`        |
+| `${viewer vault_currency}`             | `${player vault_currency}`             | `dollar`       |
+| `${viewer vault_currency_plural}`      | `${player vault_currency_plural}`      | `dollars`      |
+| `${viewer vault_primary_group}`        | `${player vault_primary_group}`        | `owner`        |
+| `${viewer vault_primary_group_weight}` | `${player vault_primary_group_weight}` | `100`          |
+| `${viewer vault_player_prefix}`        | `${player vault_player_prefix}`        | `§a[Player]`   |
+| `${viewer vault_prefix}`               | `${player vault_prefix}`               | `§c[Owner]`    |
+| `${viewer vault_primary_group_prefix}` | `${player vault_primary_group_prefix}` | `§c[Owner]`    |
+| `${viewer vault_suffix}`               | `${player vault_suffix}`               | `§a[Player]`   |
 
 #### ASkyBlock
 [Spigot Page](https://www.spigotmc.org/resources/1220)
 
-| Viewer Variant                     | Player Variant                     |
-| ---------------------------------- | ---------------------------------- |
-| `${viewer askyblock_island_level}` | `${player askyblock_island_level}` |
-| `${viewer askyblock_island_name}`  | `${player askyblock_island_name}`  |
-| `${viewer askyblock_team_leader}`  | `${player askyblock_team_leader}`  |
+| Viewer Variant                     | Player Variant                     | Example Output  |
+| ---------------------------------- | ---------------------------------- | --------------- |
+| `${viewer askyblock_island_level}` | `${player askyblock_island_level}` | `10`            |
+| `${viewer askyblock_island_name}`  | `${player askyblock_island_name}`  | `island`        |
+| `${viewer askyblock_team_leader}`  | `${player askyblock_team_leader}`  | `CodeCrafter47` |
 
 #### PartyAndFriends Clans
 
-| Viewer Variant                                 | Player Variant                                 |
-| ---------------------------------------------- | ---------------------------------------------- |
-| `${viewer paf_clans_clan_name}`                | `${player paf_clans_clan_name}`                |
-| `${viewer paf_clans_clan_tag}`                 | `${player paf_clans_clan_tag}`                 |
-| `${viewer paf_clans_clan_member_count}`        | `${player paf_clans_clan_member_count}`        |
-| `${viewer paf_clans_clan_online_member_count}` | `${player paf_clans_clan_online_member_count}` |
-| `${viewer paf_clans_is_leader}`                | `${player paf_clans_is_leader}`                |
+| Viewer Variant                                 | Player Variant                                 | Example Output |
+| ---------------------------------------------- | ---------------------------------------------- | -------------- |
+| `${viewer paf_clans_clan_name}`                | `${player paf_clans_clan_name}`                | `clan`         |
+| `${viewer paf_clans_clan_tag}`                 | `${player paf_clans_clan_tag}`                 | `§aClan`       |
+| `${viewer paf_clans_clan_member_count}`        | `${player paf_clans_clan_member_count}`        | `10`           |
+| `${viewer paf_clans_clan_online_member_count}` | `${player paf_clans_clan_online_member_count}` | `5`            |
+| `${viewer paf_clans_is_leader}`                | `${player paf_clans_is_leader}`                | `true`         |
 
 [!]: ifBTLP
 #### LuckPerms
 [Spigot Page](https://www.spigotmc.org/resources/28140)
 
-| Viewer Variant                                   | Player Variant                                   |
-| ------------------------------------------------ | ------------------------------------------------ |
-| `${viewer luckpermsbungee_prefix}`               | `${player luckpermsbungee_prefix}`               |
-| `${viewer luckpermsbungee_suffix}`               | `${player luckpermsbungee_suffix}`               |
-| `${viewer luckpermsbungee_primary_group}`        | `${player luckpermsbungee_primary_group}`        |
-| `${viewer luckpermsbungee_primary_group_weight}` | `${player luckpermsbungee_primary_group_weight}` |
+| Viewer Variant                                   | Player Variant                                   | Example Output |
+| ------------------------------------------------ | ------------------------------------------------ | -------------- |
+| `${viewer luckpermsbungee_prefix}`               | `${player luckpermsbungee_prefix}`               | `§c[Owner]`    |
+| `${viewer luckpermsbungee_suffix}`               | `${player luckpermsbungee_suffix}`               | `§a[Player]`   |
+| `${viewer luckpermsbungee_primary_group}`        | `${player luckpermsbungee_primary_group}`        | `§c[Owner]`    |
+| `${viewer luckpermsbungee_primary_group_weight}` | `${player luckpermsbungee_primary_group_weight}` | `§a[Player]`   |
 
 #### BungeePerms
 [Spigot Page](https://www.spigotmc.org/resources/25)
 
-| Viewer Variant                               | Player Variant                               |
-| -------------------------------------------- | --------------------                         |
-| `${viewer bungeeperms_display}`              | `${player bungeeperms_display}`              |
-| `${viewer bungeeperms_prefix}`               | `${player bungeeperms_prefix}`               |
-| `${viewer bungeeperms_primary_group}`        | `${player bungeeperms_primary_group}`        |
-| `${viewer bungeeperms_primary_group_weight}` | `${player bungeeperms_primary_group_weight}` |
-| `${viewer bungeeperms_primary_group_rank}`   | `${player bungeeperms_primary_group_rank}`   |
-| `${viewer bungeeperms_primary_group_prefix}` | `${player bungeeperms_primary_group_prefix}` |
-| `${viewer bungeeperms_suffix}`               | `${player bungeeperms_suffix}`               |
-| `${viewer bungeeperms_user_prefix}`          | `${player bungeeperms_user_prefix}`          |
+| Viewer Variant                               | Player Variant                               | Example Output    |
+| -------------------------------------------- | -------------------------------------------- | ----------------- |
+| `${viewer bungeeperms_display}`              | `${player bungeeperms_display}`              | `§aCodeCrafter47` |
+| `${viewer bungeeperms_prefix}`               | `${player bungeeperms_prefix}`               | `§c[Owner]`       |
+| `${viewer bungeeperms_primary_group}`        | `${player bungeeperms_primary_group}`        | `owner`           |
+| `${viewer bungeeperms_primary_group_weight}` | `${player bungeeperms_primary_group_weight}` | `100`             |
+| `${viewer bungeeperms_primary_group_rank}`   | `${player bungeeperms_primary_group_rank}`   | `owner`           |
+| `${viewer bungeeperms_primary_group_prefix}` | `${player bungeeperms_primary_group_prefix}` | `§c[Owner]`       |
+| `${viewer bungeeperms_suffix}`               | `${player bungeeperms_suffix}`               | `§a[Player]`      |
+| `${viewer bungeeperms_user_prefix}`          | `${player bungeeperms_user_prefix}`          | `§a[Player]`      |
 
 #### BungeeOnlineTime
 [Spigot Page](https://www.spigotmc.org/resources/795)
 
-| Viewer Variant                           | Player Variant                           |
-| ---------------------------------------- | ---------------------------------------- |
-| `${viewer bungeeonlinetime_days}`        | `${player bungeeonlinetime_days}`        |
-| `${viewer bungeeonlinetime_hours_of_24}` | `${player bungeeonlinetime_hours_of_24}` |
-| `${viewer bungeeonlinetime_hours}`       | `${player bungeeonlinetime_hours}`       |
-| `${viewer bungeeonlinetime_minutes}`     | `${player bungeeonlinetime_minutes}`     |
-| `${viewer bungeeonlinetime_seconds}`     | `${player bungeeonlinetime_seconds}`     |
+| Viewer Variant                           | Player Variant                           | Example Output |
+| ---------------------------------------- | ---------------------------------------- | -------------- |
+| `${viewer bungeeonlinetime_days}`        | `${player bungeeonlinetime_days}`        | `10`           |
+| `${viewer bungeeonlinetime_hours_of_24}` | `${player bungeeonlinetime_hours_of_24}` | `10`           |
+| `${viewer bungeeonlinetime_hours}`       | `${player bungeeonlinetime_hours}`       | `23`           |
+| `${viewer bungeeonlinetime_minutes}`     | `${player bungeeonlinetime_minutes}`     | `59`           |
+| `${viewer bungeeonlinetime_seconds}`     | `${player bungeeonlinetime_seconds}`     | `59`           |
 
 #### RedisBungee
 [Spigot Page](https://www.spigotmc.org/resources/13494)
 
-| Viewer Variant                    | Player Variant                    |
-| --------------------------------- | --------------------------------- |
-| `${viewer redisbungee_server_id}` | `${player redisbungee_server_id}` |
+| Viewer Variant                    | Player Variant                    | Example Output |
+| --------------------------------- | --------------------------------- | -------------- |
+| `${viewer redisbungee_server_id}` | `${player redisbungee_server_id}` | `server`       |
 
 #### Nucleus
 [Sponge Page](https://ore.spongepowered.org/Nucleus/Nucleus/pages/Home)
 
-| Viewer Variant           | Player Variant           |
-| ------------------------ | ------------------------ |
-| `${viewer nucleus_afk}`  | `${player nucleus_afk}`  |
-| `${viewer nucleus_nick}` | `${player nucleus_nick}` |
+| Viewer Variant           | Player Variant           | Example Output  |
+| ------------------------ | ------------------------ | --------------- |
+| `${viewer nucleus_afk}`  | `${player nucleus_afk}`  | `false`         |
+| `${viewer nucleus_nick}` | `${player nucleus_nick}` | `§aCodeCrafter` |
 
 
 ### Server bound placeholders
