@@ -152,7 +152,7 @@ Add a dependency to the BungeeTabListPlus API to your maven project.
     ```
 
 **Example:**
-You can find the full source code of the example at [https://github.com/CodeCrafter47/BungeeTabListPlus/example/bungee](https://github.com/CodeCrafter47/BungeeTabListPlus/example/bungee).
+You can find the full source code of the example at [https://github.com/CodeCrafter47/BungeeTabListPlus/example/bungee](https://github.com/CodeCrafter47/BungeeTabListPlus/tree/dev/example/bungee).
 ![](images/api-demo-clock.gif)
 ```java
 public class DemoPlugin extends Plugin {
